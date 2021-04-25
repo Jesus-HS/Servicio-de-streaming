@@ -20,6 +20,7 @@ namespace Agenda_Citas
         }
         private void GenerarDiasPanel(int diastotales)
         {
+            //prueba
             flDias.Controls.Clear();
             listFlDay.Clear();
             for (int i = 1; i < diastotales; i++)
