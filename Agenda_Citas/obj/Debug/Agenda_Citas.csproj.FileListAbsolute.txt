@@ -1,0 +1,10 @@
+C:\Users\LasAv\source\repos\Agenda_Citas\Agenda_Citas\bin\Debug\Agenda_Citas.exe.config
+C:\Users\LasAv\source\repos\Agenda_Citas\Agenda_Citas\bin\Debug\Agenda_Citas.exe
+C:\Users\LasAv\source\repos\Agenda_Citas\Agenda_Citas\bin\Debug\Agenda_Citas.pdb
+C:\Users\LasAv\source\repos\Agenda_Citas\Agenda_Citas\obj\Debug\Agenda_Citas.csprojAssemblyReference.cache
+C:\Users\LasAv\source\repos\Agenda_Citas\Agenda_Citas\obj\Debug\Agenda_Citas.Form1.resources
+C:\Users\LasAv\source\repos\Agenda_Citas\Agenda_Citas\obj\Debug\Agenda_Citas.Properties.Resources.resources
+C:\Users\LasAv\source\repos\Agenda_Citas\Agenda_Citas\obj\Debug\Agenda_Citas.csproj.GenerateResource.cache
+C:\Users\LasAv\source\repos\Agenda_Citas\Agenda_Citas\obj\Debug\Agenda_Citas.csproj.CoreCompileInputs.cache
+C:\Users\LasAv\source\repos\Agenda_Citas\Agenda_Citas\obj\Debug\Agenda_Citas.exe
+C:\Users\LasAv\source\repos\Agenda_Citas\Agenda_Citas\obj\Debug\Agenda_Citas.pdb
