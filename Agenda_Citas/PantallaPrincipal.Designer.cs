@@ -36,13 +36,13 @@ namespace Agenda_Citas
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.calendarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.heramientasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.configuraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.calendarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.heramientasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.configuraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeAgendaSpaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaDeAgendaSpaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
@@ -101,6 +101,25 @@ namespace Agenda_Citas
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
+            // clientesToolStripMenuItem
+            // 
+            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
+            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.clientesToolStripMenuItem.Text = "Clientes";
+            // 
+            // cerrarSesiónToolStripMenuItem
+            // 
+            this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.cerrarSesiónToolStripMenuItem.Text = "Cerrar sesión";
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
             // calendarioToolStripMenuItem
             // 
             this.calendarioToolStripMenuItem.Name = "calendarioToolStripMenuItem";
@@ -116,6 +135,13 @@ namespace Agenda_Citas
             this.heramientasToolStripMenuItem.Size = new System.Drawing.Size(86, 20);
             this.heramientasToolStripMenuItem.Text = "Heramientas";
             // 
+            // configuraciónToolStripMenuItem
+            // 
+            this.configuraciónToolStripMenuItem.Name = "configuraciónToolStripMenuItem";
+            this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.configuraciónToolStripMenuItem.Text = "Configuración";
+            this.configuraciónToolStripMenuItem.Click += new System.EventHandler(this.configuraciónToolStripMenuItem_Click);
+            // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -125,54 +151,32 @@ namespace Agenda_Citas
             this.toolStripMenuItem1.Size = new System.Drawing.Size(24, 20);
             this.toolStripMenuItem1.Text = "?";
             // 
-            // configuraciónToolStripMenuItem
-            // 
-            this.configuraciónToolStripMenuItem.Name = "configuraciónToolStripMenuItem";
-            this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.configuraciónToolStripMenuItem.Text = "Configuración";
-            // 
-            // clientesToolStripMenuItem
-            // 
-            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.clientesToolStripMenuItem.Text = "Clientes";
-            // 
-            // cerrarSesiónToolStripMenuItem
-            // 
-            this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cerrarSesiónToolStripMenuItem.Text = "Cerrar sesión";
-            // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.salirToolStripMenuItem.Text = "Salir";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
-            // 
             // acercaDeAgendaSpaToolStripMenuItem
             // 
             this.acercaDeAgendaSpaToolStripMenuItem.Name = "acercaDeAgendaSpaToolStripMenuItem";
             this.acercaDeAgendaSpaToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.acercaDeAgendaSpaToolStripMenuItem.Text = "Acerca de Agenda - Spa";
+            this.acercaDeAgendaSpaToolStripMenuItem.Click += new System.EventHandler(this.acercaDeAgendaSpaToolStripMenuItem_Click);
             // 
             // ayudaDeAgendaSpaToolStripMenuItem
             // 
             this.ayudaDeAgendaSpaToolStripMenuItem.Name = "ayudaDeAgendaSpaToolStripMenuItem";
             this.ayudaDeAgendaSpaToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.ayudaDeAgendaSpaToolStripMenuItem.Text = "Ayuda de Agenda - Spa";
+            this.ayudaDeAgendaSpaToolStripMenuItem.Click += new System.EventHandler(this.ayudaDeAgendaSpaToolStripMenuItem_Click);
             // 
             // PantallaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1026, 514);
             this.Controls.Add(this.lblFecha);
             this.Controls.Add(this.lblHora);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "PantallaPrincipal";

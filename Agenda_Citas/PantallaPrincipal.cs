@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 
 namespace Agenda_Citas
 {
@@ -32,6 +26,27 @@ namespace Agenda_Citas
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void ayudaDeAgendaSpaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            /* Abrir pdf de MANUAL DE USUARIO 
+               falta checar bien la ruta */
+            Process pro = new Process();
+            pro.StartInfo.FileName = (@"C:\Users\melis\OneDrive\Escritorio\MANUAL DE USUARIO.pdf");
+            pro.Start();
+        }
+
+        private void acercaDeAgendaSpaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AcercaDe acerca = new AcercaDe();
+            acerca.Show();
+        }
+
+        private void configuraciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Herramientas herramientas = new Herramientas();
+            herramientas.Show();
         }
     }
 }
