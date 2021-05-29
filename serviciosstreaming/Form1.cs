@@ -19,10 +19,13 @@ namespace serviciosstreaming
         {
             InitializeComponent();
         }
+
         SqlConnection cn = new SqlConnection("Data Source = LAPTOP-L0KF26J2\\SQLEXPRESS; Initial Catalog = PeliculasWeb; Integrated Security = True");
         SqlCommand cmd;
         DataTable dt;
         SqlDataAdapter da;
+        DataSet ds;
+        DataRow dr;
         private void button1_Click(object sender, EventArgs e)
         {
             //textodeformato (*.formato)|*.formato| otroformato (*.formato2*)|*.formato2
@@ -42,17 +45,32 @@ namespace serviciosstreaming
             cmd = new SqlCommand();
             cmd.Connection = cn;
             MemoryStream ms = new MemoryStream();
-            pictureBox2.Image.Save(ms, ImageFormat.Jpeg);
             //Insertamos
-            cmd.CommandText = "INSERT INTO peliculas VALUES('" + textBox1.Text + "','" + richTextBox1.Text + "', '"+ ms.GetBuffer() + "')";
-       
+            cmd.CommandText = "INSERT INTO peliculas VALUES('" + textBox1.Text + "','" + richTextBox1.Text + "',@portada)";
+            pictureBox2.Image.Save(ms, ImageFormat.Jpeg);
+            cmd.Parameters.Add(new SqlParameter("@portada", ms.GetBuffer()));
             cn.Open();
             cmd.ExecuteNonQuery();
             cn.Close();
-            da = new SqlDataAdapter("SELECT *FROM peliculas", cn);
-            dt = new DataTable();
-            da.Fill(dt);
-            dgv.DataSource = dt;
+        }
+
+        private void btnMostrar_Click(object sender, EventArgs e)
+        {
+            cmd = new SqlCommand("select portada from peliculas WHERE idPelicula = 5",cn);
+            da = new SqlDataAdapter(cmd);
+            ds = new DataSet("peliculas");
+
+            byte[] MisDatos = new byte[0];
+
+
+            cn.Open();
+            da.Fill(ds, "peliculas");
+            dr = ds.Tables["peliculas"].Rows[0];
+            MisDatos = (byte[])dr["portada"];
+            MemoryStream ms = new MemoryStream(MisDatos);
+            pictureBox3.Image = Image.FromStream(ms);
+            ms.Position = 0;
+            cn.Close();
         }
     }
 }
