@@ -20,7 +20,7 @@ namespace serviciosstreaming
             InitializeComponent();
         }
 
-        SqlConnection cn = new SqlConnection("Data Source = LAPTOP-L0KF26J2\\SQLEXPRESS; Initial Catalog = PeliculasWeb; Integrated Security = True");
+        SqlConnection cn = new SqlConnection("Data Source=LAPTOP-560QHQJK;Integrated Security=SSPI;Initial Catalog=PeliculasWeb");
         SqlCommand cmd;
         DataTable dt;
         SqlDataAdapter da;
