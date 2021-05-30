@@ -86,6 +86,18 @@ namespace serviciosstreaming
         {
 
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+            Bienvenida bienvenida = new Bienvenida();
+            bienvenida.Show();
+        }
     }
 
 }

@@ -19,16 +19,21 @@ namespace serviciosstreaming
 
         private void button1_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Login login = new Login();
             login.Show();
-            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            this.Hide();
             Regis regis = new Regis();
             regis.Show();
-            this.Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

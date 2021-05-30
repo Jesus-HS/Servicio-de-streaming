@@ -1,13 +1,5 @@
-﻿using Libary;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace serviciosstreaming
@@ -24,7 +16,6 @@ namespace serviciosstreaming
         {
             try
             {
-                Validarcampos();
                 conexion.Open();
 
                 SqlCommand altas = new SqlCommand("INSERT INTO usuarios (nombreUsuariO, contraseñaUsuario) VALUES (@nombreUsuario, @contraseñaUsuario)", conexion);
@@ -48,7 +39,7 @@ namespace serviciosstreaming
             {
                 MessageBox.Show("Error al ingresar los datos.");
             }
-            
+            Validarcampos();
         }
         private bool Validarcampos()
         {
@@ -65,7 +56,6 @@ namespace serviciosstreaming
             }
             return ok;
         }
-
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             /* Para que la casilla donde se ingres ala contraseña pueda ser visible 
@@ -81,6 +71,16 @@ namespace serviciosstreaming
             {
                 txtPassword.PasswordChar = '*';
             }
+        }
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+            Bienvenida bienvenida = new Bienvenida();
+            bienvenida.Show();
+        }
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+           
         }
     }
 }
