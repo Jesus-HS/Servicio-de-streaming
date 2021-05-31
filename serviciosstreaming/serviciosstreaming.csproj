@@ -136,9 +136,9 @@
     <None Include="Resources\logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Libary\Libary\Libary.csproj">
-      <Project>{719de692-4e09-455b-b285-9b5630082749}</Project>
-      <Name>Libary</Name>
+    <ProjectReference Include="..\Libr\Libr.csproj">
+      <Project>{f8a88566-b67f-4e68-be23-8fec6b0cf45d}</Project>
+      <Name>Libr</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
