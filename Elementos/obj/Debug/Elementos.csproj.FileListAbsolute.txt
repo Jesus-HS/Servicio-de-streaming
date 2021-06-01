@@ -1,0 +1,9 @@
+C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\Elementos\bin\Debug\Elementos.dll
+C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\Elementos\bin\Debug\Elementos.pdb
+C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\Elementos\obj\Debug\Elementos.csprojAssemblyReference.cache
+C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\Elementos\obj\Debug\Elementos.ucLogin.resources
+C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\Elementos\obj\Debug\Elementos.ucRegister.resources
+C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\Elementos\obj\Debug\Elementos.csproj.GenerateResource.cache
+C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\Elementos\obj\Debug\Elementos.csproj.CoreCompileInputs.cache
+C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\Elementos\obj\Debug\Elementos.dll
+C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\Elementos\obj\Debug\Elementos.pdb

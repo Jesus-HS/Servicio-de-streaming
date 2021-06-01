@@ -25,3 +25,18 @@ C:\Users\melis\OneDrive\Escritorio\Nueva carpeta (2)\serviciosstreaming\obj\Debu
 C:\Users\melis\OneDrive\Escritorio\Nueva carpeta (2)\serviciosstreaming\obj\Debug\serviciosstreaming.Bienvenida.resources
 C:\Users\melis\OneDrive\Escritorio\Nueva carpeta (2)\serviciosstreaming\obj\Debug\serviciosstreaming.Principal.resources
 C:\Users\melis\OneDrive\Escritorio\Nueva carpeta (2)\serviciosstreaming\obj\Debug\serviciosstreaming.Regis.resources
+C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\bin\Debug\serviciosstreaming.exe.config
+C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\bin\Debug\serviciosstreaming.exe
+C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\bin\Debug\serviciosstreaming.pdb
+C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\bin\Debug\Elementos.dll
+C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\bin\Debug\Elementos.pdb
+C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\obj\Debug\serviciosstreaming.csprojAssemblyReference.cache
+C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\obj\Debug\serviciosstreaming.Bienvenida.resources
+C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\obj\Debug\serviciosstreaming.Form1.resources
+C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\obj\Debug\serviciosstreaming.Principal.resources
+C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\obj\Debug\serviciosstreaming.Properties.Resources.resources
+C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\obj\Debug\serviciosstreaming.csproj.GenerateResource.cache
+C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\obj\Debug\serviciosstreaming.csproj.CoreCompileInputs.cache
+C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\obj\Debug\serviciosstreaming.csproj.CopyComplete
+C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\obj\Debug\serviciosstreaming.exe
+C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\obj\Debug\serviciosstreaming.pdb
