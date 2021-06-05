@@ -43,27 +43,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Consultas.cs" />
-    <Compile Include="ucLogin.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ucLogin.Designer.cs">
-      <DependentUpon>ucLogin.cs</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ucRegister.cs">
+    <Compile Include="ucLog.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucRegister.Designer.cs">
-      <DependentUpon>ucRegister.cs</DependentUpon>
+    <Compile Include="ucLog.Designer.cs">
+      <DependentUpon>ucLog.cs</DependentUpon>
     </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ucLogin.resx">
-      <DependentUpon>ucLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ucRegister.resx">
-      <DependentUpon>ucRegister.cs</DependentUpon>
+    <EmbeddedResource Include="ucLog.resx">
+      <DependentUpon>ucLog.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

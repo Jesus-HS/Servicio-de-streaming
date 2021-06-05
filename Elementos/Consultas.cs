@@ -7,10 +7,12 @@ namespace Elementos
 {
     class Consultas
     {
-        public SqlConnection cn;
-        public SqlCommand cmd;
+        SqlConnection cn;
+        SqlCommand cmd;
         DataTable dt;
         SqlDataAdapter da;
+        DataSet ds;
+
 
         /// <summary> 
         /// Realiza una conexion a la tabla
@@ -58,6 +60,16 @@ namespace Elementos
             {
                 MessageBox.Show("No se logro insertar:" + ex);
             }
+        }
+        
+        /// <summary>
+        /// Recibe 2 parametros, la columna del dato que se quiere recibir y la consulta
+        /// </sumary>
+        public string Consulta(string columna,string consulta)
+        {
+            da = new SqlDataAdapter(consulta, cn);
+            da.Fill(ds);
+            return ds.Tables[0].Rows[0][columna].ToString().Trim();
         }
     }
 }

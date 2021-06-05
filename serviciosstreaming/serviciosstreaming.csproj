@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bienvenida.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Bienvenida.Designer.cs">
-      <DependentUpon>Bienvenida.cs</DependentUpon>
-    </Compile>
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -71,9 +65,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Bienvenida.resx">
-      <DependentUpon>Bienvenida.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +113,12 @@
       <Project>{A1BDFC6C-79BA-4620-A529-CF37933F01E0}</Project>
       <Name>Elementos</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\popcorn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\popcorn %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
