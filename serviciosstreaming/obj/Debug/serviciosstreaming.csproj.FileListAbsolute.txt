@@ -40,3 +40,17 @@ C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\serviciosstreamin
 C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\obj\Debug\serviciosstreaming.csproj.CopyComplete
 C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\obj\Debug\serviciosstreaming.exe
 C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\obj\Debug\serviciosstreaming.pdb
+C:\Users\melis\OneDrive\Escritorio\Nueva carpeta (4)\serviciosstreaming\obj\Debug\serviciosstreaming.csproj.AssemblyReference.cache
+C:\Users\melis\OneDrive\Escritorio\Nueva carpeta (4)\serviciosstreaming\obj\Debug\serviciosstreaming.Form1.resources
+C:\Users\melis\OneDrive\Escritorio\Nueva carpeta (4)\serviciosstreaming\obj\Debug\serviciosstreaming.Principal.resources
+C:\Users\melis\OneDrive\Escritorio\Nueva carpeta (4)\serviciosstreaming\obj\Debug\serviciosstreaming.Properties.Resources.resources
+C:\Users\melis\OneDrive\Escritorio\Nueva carpeta (4)\serviciosstreaming\obj\Debug\serviciosstreaming.csproj.GenerateResource.cache
+C:\Users\melis\OneDrive\Escritorio\Nueva carpeta (4)\serviciosstreaming\obj\Debug\serviciosstreaming.csproj.CoreCompileInputs.cache
+C:\Users\melis\OneDrive\Escritorio\Nueva carpeta (4)\serviciosstreaming\obj\Debug\serviciosstreaming.exe
+C:\Users\melis\OneDrive\Escritorio\Nueva carpeta (4)\serviciosstreaming\obj\Debug\serviciosstreaming.pdb
+C:\Users\melis\OneDrive\Escritorio\Nueva carpeta (4)\serviciosstreaming\bin\Debug\serviciosstreaming.exe.config
+C:\Users\melis\OneDrive\Escritorio\Nueva carpeta (4)\serviciosstreaming\bin\Debug\serviciosstreaming.exe
+C:\Users\melis\OneDrive\Escritorio\Nueva carpeta (4)\serviciosstreaming\bin\Debug\serviciosstreaming.pdb
+C:\Users\melis\OneDrive\Escritorio\Nueva carpeta (4)\serviciosstreaming\bin\Debug\Elementos.dll
+C:\Users\melis\OneDrive\Escritorio\Nueva carpeta (4)\serviciosstreaming\bin\Debug\Elementos.pdb
+C:\Users\melis\OneDrive\Escritorio\Nueva carpeta (4)\serviciosstreaming\obj\Debug\serviciosstreaming.csproj.CopyComplete

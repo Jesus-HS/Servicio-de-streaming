@@ -7,18 +7,21 @@ namespace Elementos
 {
     public partial class ucRegister : UserControl
     {
-        Consultas query;
-        ErrorProvider ep = new ErrorProvider();
-        public object id { get; private set; }
         public ucRegister()
         {
             InitializeComponent();
             panel1.Location = new Point(0, 0);
             panel2.Location = new Point(0, 0);
             panel3.Location = new Point(0, 0);
-            query = new Consultas();
+
+            panel3.Hide();
+            panel2.Hide();
         }
-        
+        Consultas query = new Consultas();
+        ErrorProvider ep = new ErrorProvider();
+
+        public object id { get; private set; }
+
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             if (Validarcampos())
@@ -27,24 +30,24 @@ namespace Elementos
                 MessageBox.Show("Se registro el usuario.");
             }
         }
-
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             /* Para que la casilla donde se ingres ala contraseña pueda ser visible 
                para el usuario */
             if (checkBox1.Checked == true)
             {
-                if (txtPassword.PasswordChar == '*')
+                if (txtPassword.PasswordChar == '*' && txtPasswordC.PasswordChar == '*')
                 {
                     txtPassword.PasswordChar = '\0';
+                    txtPasswordC.PasswordChar = '\0';
                 }
             }
             else
             {
                 txtPassword.PasswordChar = '*';
+                txtPasswordC.PasswordChar = '*';
             }
         }
-
         private bool Validarcampos()
         {
             bool ok = false;
@@ -75,6 +78,51 @@ namespace Elementos
             if (account == txtUser.Text.Trim() && pass == txtPassword.Text.Trim())
             {
                 
+            }
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panel1.Hide();
+            panel2.Show();
+
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            panel1.Hide();
+            panel3.Show();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            panel2.Hide();
+            panel1.Show();
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            panel3.Hide();
+            panel1.Show();
+        }
+
+        private void btnIniciarSesion_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbMostrar_CheckedChanged(object sender, EventArgs e)
+        {
+            /* Para que la casilla donde se ingres ala contraseña pueda ser visible 
+              para el usuario */
+            if (cbMostrar.Checked == true)
+            {
+                if (txtPass.PasswordChar == '*')
+                {
+                    txtPass.PasswordChar = '\0';
+                }
+            }
+            else
+            {
+                txtPass.PasswordChar = '*';
             }
         }
     }

@@ -33,17 +33,21 @@ namespace serviciosstreaming
             this.panelInicio = new System.Windows.Forms.Panel();
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ucRegister1 = new Elementos.ucRegister();
+            this.panelInicio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelInicio
             // 
             this.panelInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(250)))), ((int)(((byte)(238)))));
+            this.panelInicio.Controls.Add(this.ucRegister1);
             this.panelInicio.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelInicio.Location = new System.Drawing.Point(588, 0);
             this.panelInicio.Name = "panelInicio";
-            this.panelInicio.Size = new System.Drawing.Size(389, 470);
+            this.panelInicio.Size = new System.Drawing.Size(389, 504);
             this.panelInicio.TabIndex = 0;
+            this.panelInicio.Paint += new System.Windows.Forms.PaintEventHandler(this.panelInicio_Paint);
             // 
             // lblBienvenido
             // 
@@ -67,19 +71,31 @@ namespace serviciosstreaming
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // ucRegister1
+            // 
+            this.ucRegister1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(250)))), ((int)(((byte)(238)))));
+            this.ucRegister1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ucRegister1.Location = new System.Drawing.Point(0, 0);
+            this.ucRegister1.Name = "ucRegister1";
+            this.ucRegister1.Size = new System.Drawing.Size(1205, 504);
+            this.ucRegister1.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(977, 470);
+            this.ClientSize = new System.Drawing.Size(977, 504);
             this.Controls.Add(this.lblBienvenido);
             this.Controls.Add(this.panelInicio);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Servicios streaming";
+            this.panelInicio.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -91,6 +107,7 @@ namespace serviciosstreaming
         private System.Windows.Forms.Panel panelInicio;
         private System.Windows.Forms.Label lblBienvenido;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Elementos.ucRegister ucRegister1;
     }
 }
 
