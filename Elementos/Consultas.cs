@@ -2,15 +2,16 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Elementos
 {
     class Consultas
     {
-        SqlConnection cn;
-        SqlCommand cmd;
+        MySqlConnection cn;
+        MySqlCommand cmd;
         DataTable dt;
-        SqlDataAdapter da;
+        MySqlDataAdapter da;
         DataSet ds;
 
 
@@ -21,7 +22,7 @@ namespace Elementos
         {
             try
             {
-                cn = new SqlConnection("Data Source=LAPTOP-L0KF26J2\\SQLEXPRESS; Initial Catalog=peliculasweb; Integrated Security=True");
+                cn = new MySqlConnection("server=usla641.gamedata.io; database=ni5508816_1_DB; Uid=ni5508816_1_DB; pwd=y0GuL29g; ");
             }
             catch (Exception ex)
             {
@@ -35,7 +36,7 @@ namespace Elementos
         {
             try
             {
-                da = new SqlDataAdapter(consulta, cn);
+                da = new MySqlDataAdapter(consulta, cn);
                 dt = new DataTable();
                 da.Fill(dt);
                 dgv.DataSource = dt;
@@ -53,7 +54,7 @@ namespace Elementos
         {
             try
             {
-                cmd = new SqlCommand(consulta, cn);
+                cmd = new MySqlCommand(consulta, cn);
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -67,7 +68,7 @@ namespace Elementos
         /// </sumary>
         public string Consulta(string columna,string consulta)
         {
-            da = new SqlDataAdapter(consulta, cn);
+            da = new MySqlDataAdapter(consulta, cn);
             da.Fill(ds);
             return ds.Tables[0].Rows[0][columna].ToString().Trim();
         }

@@ -7,18 +7,18 @@ namespace Elementos
 {
     public partial class ucRegister : UserControl
     {
+        Consultas query;
+        ErrorProvider ep = new ErrorProvider();
+        public object id { get; private set; }
         public ucRegister()
         {
             InitializeComponent();
             panel1.Location = new Point(0, 0);
             panel2.Location = new Point(0, 0);
             panel3.Location = new Point(0, 0);
+            query = new Consultas();
         }
-        Consultas query = new Consultas();
-        ErrorProvider ep = new ErrorProvider();
-
-        public object id { get; private set; }
-
+        
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             if (Validarcampos())
