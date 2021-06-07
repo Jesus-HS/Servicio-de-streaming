@@ -1,98 +1,83 @@
-USE PeliculasWeb;
+DELIMITER $$
+	CREATE PROCEDURE insertarGeneros(IN nombre varchar(20))
+	BEGIN
+		INSERT INTO generos VALUES(DEFAULT, nombre);
+	END$$
 
-CREATE PROCEDURE insertarGeneros
-@nombre varchar(20)
-AS
-	INSERT INTO Generos VALUES(@nombre);
-GO
+DELIMITER $$
+CREATE PROCEDURE insertarPelicula(IN nombre varchar(20), descripcion varchar(300), imagen BLOB)
+BEGIN
+	INSERT INTO peliculas VALUES(DEFAULT,nombre,descripcion,imagen);
+END$$
 
-CREATE PROCEDURE insertarPelicula
-@nombre varchar(20),
-@descripcion varchar(300),
-@imagen IMAGE
-AS
-	INSERT INTO peliculas VALUES(@nombre,@descripcion,@imagen);
-GO
+DELIMITER $$
+CREATE PROCEDURE insertarActor(IN nombre varchar(50))
+BEGIN
+    INSERT INTO actores VALUES(DEFAULT,nombre);
+END $$
 
-CREATE PROCEDURE insertarActor
-@nombre varchar(50)
-AS
-	INSERT INTO actores VALUES(@nombre);
-GO
+DELIMITER $$
+CREATE PROCEDURE insertarDirector(IN nombre varchar(50))
+BEGIN
+    INSERT INTO directores VALUES(DEFAULT,nombre);
+END $$
 
-CREATE PROCEDURE insertarDirector
-@nombre varchar(50)
-AS
-    INSERT INTO directores VALUES(@nombre);
-GO
+DELIMITER $$
+CREATE PROCEDURE insertarPlataforma(nombre varchar(50))
+BEGIN
+    INSERT INTO plataformas VALUES(DEFAULT,nombre);
+END $$
 
-CREATE PROCEDURE insertarPlataforma
-@nombre varchar(50)
-AS
-    INSERT INTO plataformas VALUES(@nombre);
-GO
+DELIMITER $$
+CREATE PROCEDURE insertarTipo(IN nombre varchar(13))
+BEGIN
+    INSERT INTO tipos VALUES(DEFAULT,nombre);
+END $$
 
-CREATE PROCEDURE insertarTipos
-@nombre varchar(13)
-AS
-    INSERT INTO tipos VALUES(@nombre);
-GO
+DELIMITER $$
+CREATE PROCEDURE insertarDistribucion(IN precio int,calidad varchar(5),tipo int)
+BEGIN
+    INSERT INTO distribuciones VALUES(DEFAULT,precio,calidad,tipo);
+END $$
 
-CREATE PROCEDURE insertarDistribucion
-@precio int,
-@calidad varchar(5),
-@tipo int
-AS
-	INSERT INTO distribuciones VALUES(@precio,@calidad,@tipo);
-GO
+DELIMITER $$
+CREATE PROCEDURE insertarUsuario(IN nombre varchar(20) , contrasena varchar (20))
+BEGIN
+    INSERT INTO usuarios VALUES(DEFAULT,nombre,contrasena);
+END $$
 
-CREATE PROCEDURE insertarUsuarios
-@nombre varchar(20),
-@contrasena varchar (20)
-AS
-    INSERT INTO usuarios VALUES(@nombre,@contrasena);
-GO
+DELIMITER $$
+CREATE PROCEDURE insertarComentario(IN idUsuario int,comentario varchar(300), idPelicula int)
+BEGIN
+    INSERT INTO comentarios VALUES(DEFAULT,idUsuario,comentario,idPelicula);
+END $$
 
-CREATE PROCEDURE insertarComentarios
-@idUsuario int,
-@comentario varchar(300),
-@idPelicula int
-AS
-    INSERT INTO comentarios VALUES(@idUsuario, @comentario, @idPelicula);
-GO
+DELIMITER $$
+CREATE PROCEDURE insertarInterpretes(IN idActor int,idPelicula int)
+BEGIN
+    INSERT INTO directores VALUES(DEFAULT,idActor,idPelicula);
+END $$
 
-CREATE PROCEDURE insertarInterpretes
-@idActor int,
-@idPelicula int
-AS
-    INSERT INTO directores VALUES(idActor,idPelicula);
-GO
+DELIMITER $$
+CREATE PROCEDURE insertarCordinadores(IN idPelicula int,idDirector int)
+BEGIN
+    INSERT INTO directores VALUES(DEFAULT,idPelicula ,idDirector);
+END $$
 
-CREATE PROCEDURE insertarCordinadores
-@idPelicula int,
-@idDirector int
-AS
-    INSERT INTO directores VALUES(idPelicula ,idDirector);
-GO
+DELIMITER $$
+CREATE PROCEDURE insertarContine(IN idPelicula int,idGenero int)
+BEGIN
+    INSERT INTO directores VALUES(DEFAULT,idPelicula ,idGenero);
+END $$
 
-CREATE PROCEDURE insertarContine
-@idPelicula int,
-@idGenero int
-AS
-    INSERT INTO directores VALUES(@idPelicula ,@idGenero);
-GO
+DELIMITER $$
+CREATE PROCEDURE insertarServicios(IN idPlataforma int, idDistribucion int)
+BEGIN
+    INSERT INTO directores VALUES(DEFAULT,idPlataforma ,idDistribucion);
+END $$
 
-
-CREATE PROCEDURE insertarServicios
-@idPlataforma int,
-@idDistribucion int
-AS
-    INSERT INTO directores VALUES(@idPlataforma ,@idDistribucion);
-GO
-
-CREATE PROCEDURE insertarCategoria
-@idPelicula int,
-@idGenero int
-AS
-    INSERT INTO directores VALUES(@idPelicula ,@idGenero);
-GO
+DELIMITER $$
+CREATE PROCEDURE insertarCategoria(IN idPelicula int,idGenero int)
+BEGIN
+    INSERT INTO directores VALUES(DEFAULT,idPelicula ,idGenero);
+END $$

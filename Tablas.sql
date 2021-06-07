@@ -1,5 +1,5 @@
-CREATE database streaming;
-use streaming;       
+CREATE database ni5508816_1_DB;
+use ni5508816_1_DB;
 -- TABLAS INDEPENDIENTES
 CREATE TABLE generos
 (
