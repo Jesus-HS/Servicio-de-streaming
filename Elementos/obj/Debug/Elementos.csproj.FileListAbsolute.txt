@@ -14,3 +14,4 @@ C:\Users\melis\OneDrive\Escritorio\Nueva carpeta (4)\Elementos\obj\Debug\Element
 C:\Users\melis\OneDrive\Escritorio\Nueva carpeta (4)\Elementos\obj\Debug\Elementos.csproj.CoreCompileInputs.cache
 C:\Users\melis\OneDrive\Escritorio\Nueva carpeta (4)\Elementos\obj\Debug\Elementos.dll
 C:\Users\melis\OneDrive\Escritorio\Nueva carpeta (4)\Elementos\obj\Debug\Elementos.pdb
+C:\Users\melis\OneDrive\Escritorio\Nueva carpeta (4)\Elementos\obj\Debug\Elementos.csproj.AssemblyReference.cache

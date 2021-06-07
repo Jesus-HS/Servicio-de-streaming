@@ -52,5 +52,10 @@ namespace serviciosstreaming
         {
             Show(panel2);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

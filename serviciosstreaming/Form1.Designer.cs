@@ -45,7 +45,7 @@ namespace serviciosstreaming
             this.panelInicio.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelInicio.Location = new System.Drawing.Point(588, 0);
             this.panelInicio.Name = "panelInicio";
-            this.panelInicio.Size = new System.Drawing.Size(389, 470);
+            this.panelInicio.Size = new System.Drawing.Size(389, 504);
             this.panelInicio.TabIndex = 0;
             this.panelInicio.Paint += new System.Windows.Forms.PaintEventHandler(this.panelInicio_Paint);
             // 
@@ -77,7 +77,7 @@ namespace serviciosstreaming
             this.ucRegister1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.ucRegister1.Location = new System.Drawing.Point(0, 0);
             this.ucRegister1.Name = "ucRegister1";
-            this.ucRegister1.Size = new System.Drawing.Size(1205, 467);
+            this.ucRegister1.Size = new System.Drawing.Size(1205, 504);
             this.ucRegister1.TabIndex = 0;
             // 
             // Form1
@@ -85,14 +85,16 @@ namespace serviciosstreaming
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(977, 470);
+            this.ClientSize = new System.Drawing.Size(977, 504);
             this.Controls.Add(this.lblBienvenido);
             this.Controls.Add(this.panelInicio);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Servicios streaming";
             this.panelInicio.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

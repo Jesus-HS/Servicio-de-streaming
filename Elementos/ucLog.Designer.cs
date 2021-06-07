@@ -48,11 +48,13 @@ namespace Elementos
             this.panel3 = new System.Windows.Forms.Panel();
             this.cbMostrar = new System.Windows.Forms.CheckBox();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -243,6 +245,7 @@ namespace Elementos
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.linkLabel1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.btnRegistrar);
             this.panel2.Controls.Add(this.label4);
@@ -259,10 +262,11 @@ namespace Elementos
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.linkLabel2);
             this.panel3.Controls.Add(this.cbMostrar);
             this.panel3.Controls.Add(this.btnIniciarSesion);
-            this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Controls.Add(this.txtPass);
+            this.panel3.Controls.Add(this.txtUsuario);
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label8);
@@ -283,6 +287,7 @@ namespace Elementos
             this.cbMostrar.TabIndex = 38;
             this.cbMostrar.Text = "Mostar contraseña";
             this.cbMostrar.UseVisualStyleBackColor = false;
+            this.cbMostrar.CheckedChanged += new System.EventHandler(this.cbMostrar_CheckedChanged);
             // 
             // btnIniciarSesion
             // 
@@ -299,23 +304,24 @@ namespace Elementos
             this.btnIniciarSesion.TabIndex = 37;
             this.btnIniciarSesion.Text = "Iniciar";
             this.btnIniciarSesion.UseVisualStyleBackColor = false;
+            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click_1);
             // 
-            // textBox1
+            // txtPass
             // 
-            this.textBox1.Font = new System.Drawing.Font("Verdana", 15.75F);
-            this.textBox1.Location = new System.Drawing.Point(50, 279);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(305, 33);
-            this.textBox1.TabIndex = 36;
+            this.txtPass.Font = new System.Drawing.Font("Verdana", 15.75F);
+            this.txtPass.Location = new System.Drawing.Point(50, 279);
+            this.txtPass.Name = "txtPass";
+            this.txtPass.PasswordChar = '*';
+            this.txtPass.Size = new System.Drawing.Size(305, 33);
+            this.txtPass.TabIndex = 36;
             // 
-            // textBox2
+            // txtUsuario
             // 
-            this.textBox2.Font = new System.Drawing.Font("Verdana", 15.75F);
-            this.textBox2.Location = new System.Drawing.Point(50, 175);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(305, 33);
-            this.textBox2.TabIndex = 35;
+            this.txtUsuario.Font = new System.Drawing.Font("Verdana", 15.75F);
+            this.txtUsuario.Location = new System.Drawing.Point(50, 175);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(305, 33);
+            this.txtUsuario.TabIndex = 35;
             // 
             // label6
             // 
@@ -351,6 +357,32 @@ namespace Elementos
             this.label8.Size = new System.Drawing.Size(271, 38);
             this.label8.TabIndex = 32;
             this.label8.Text = "Inicio de Sesion";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkColor = System.Drawing.Color.Navy;
+            this.linkLabel1.Location = new System.Drawing.Point(302, 470);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(80, 18);
+            this.linkLabel1.TabIndex = 25;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Regresar";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel2.LinkColor = System.Drawing.Color.Navy;
+            this.linkLabel2.Location = new System.Drawing.Point(300, 470);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(80, 18);
+            this.linkLabel2.TabIndex = 39;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Regresar";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // ucRegister
             // 
@@ -392,8 +424,8 @@ namespace Elementos
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.CheckBox cbMostrar;
         private System.Windows.Forms.Button btnIniciarSesion;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPass;
+        private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -401,5 +433,7 @@ namespace Elementos
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblInvitado;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }
