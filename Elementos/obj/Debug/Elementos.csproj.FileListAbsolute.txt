@@ -7,3 +7,10 @@ C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\Elementos\obj\Deb
 C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\Elementos\obj\Debug\Elementos.csproj.CoreCompileInputs.cache
 C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\Elementos\obj\Debug\Elementos.dll
 C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\Elementos\obj\Debug\Elementos.pdb
+C:\Users\melis\OneDrive\Escritorio\Nueva carpeta (4)\Elementos\bin\Debug\Elementos.dll
+C:\Users\melis\OneDrive\Escritorio\Nueva carpeta (4)\Elementos\bin\Debug\Elementos.pdb
+C:\Users\melis\OneDrive\Escritorio\Nueva carpeta (4)\Elementos\obj\Debug\Elementos.ucRegister.resources
+C:\Users\melis\OneDrive\Escritorio\Nueva carpeta (4)\Elementos\obj\Debug\Elementos.csproj.GenerateResource.cache
+C:\Users\melis\OneDrive\Escritorio\Nueva carpeta (4)\Elementos\obj\Debug\Elementos.csproj.CoreCompileInputs.cache
+C:\Users\melis\OneDrive\Escritorio\Nueva carpeta (4)\Elementos\obj\Debug\Elementos.dll
+C:\Users\melis\OneDrive\Escritorio\Nueva carpeta (4)\Elementos\obj\Debug\Elementos.pdb

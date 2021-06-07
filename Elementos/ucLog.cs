@@ -13,6 +13,9 @@ namespace Elementos
             panel1.Location = new Point(0, 0);
             panel2.Location = new Point(0, 0);
             panel3.Location = new Point(0, 0);
+
+            panel3.Hide();
+            panel2.Hide();
         }
         Consultas query = new Consultas();
         ErrorProvider ep = new ErrorProvider();
@@ -76,6 +79,18 @@ namespace Elementos
             {
                 
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            panel1.Hide();
+            panel2.Show();
+
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            panel1.Hide();
+            panel3.Show();
         }
     }
 }

@@ -30,7 +30,7 @@ namespace serviciosstreaming
         }
         private void Show(Panel submenu)
         {
-            if(submenu.Visible == false)
+            if (submenu.Visible == false)
             {
                 hide();
                 submenu.Visible = true;
@@ -39,19 +39,15 @@ namespace serviciosstreaming
             {
                 submenu.Visible = false;
             }
-
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
 
         }
-
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
         private void button4_Click(object sender, EventArgs e)
         {
             Show(panel2);

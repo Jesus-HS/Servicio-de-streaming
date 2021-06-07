@@ -19,5 +19,10 @@ namespace serviciosstreaming
         {
             InitializeComponent();
         }
+
+        private void panelInicio_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -40,6 +40,8 @@ namespace Elementos
             this.txtPasswordC = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lblInvitado = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -51,8 +53,6 @@ namespace Elementos
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.lblInvitado = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -61,7 +61,7 @@ namespace Elementos
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.BackColor = System.Drawing.Color.White;
+            this.checkBox1.BackColor = System.Drawing.Color.Transparent;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.ForeColor = System.Drawing.Color.Navy;
             this.checkBox1.Location = new System.Drawing.Point(43, 357);
@@ -184,6 +184,29 @@ namespace Elementos
             this.panel1.Size = new System.Drawing.Size(400, 500);
             this.panel1.TabIndex = 32;
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(57)))), ((int)(((byte)(70)))));
+            this.label9.Location = new System.Drawing.Point(65, 36);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(261, 108);
+            this.label9.TabIndex = 19;
+            this.label9.Text = "Logo";
+            // 
+            // lblInvitado
+            // 
+            this.lblInvitado.AutoSize = true;
+            this.lblInvitado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblInvitado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInvitado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(158)))), ((int)(((byte)(188)))));
+            this.lblInvitado.Location = new System.Drawing.Point(91, 306);
+            this.lblInvitado.Name = "lblInvitado";
+            this.lblInvitado.Size = new System.Drawing.Size(137, 13);
+            this.lblInvitado.TabIndex = 18;
+            this.lblInvitado.Text = "Iniciar sesion como invitado";
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
@@ -199,6 +222,7 @@ namespace Elementos
             this.button2.TabIndex = 17;
             this.button2.Text = "Iniciar sesion";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -215,6 +239,7 @@ namespace Elementos
             this.button1.TabIndex = 16;
             this.button1.Text = "Registrarse";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
@@ -249,7 +274,7 @@ namespace Elementos
             // cbMostrar
             // 
             this.cbMostrar.AutoSize = true;
-            this.cbMostrar.BackColor = System.Drawing.Color.White;
+            this.cbMostrar.BackColor = System.Drawing.Color.Transparent;
             this.cbMostrar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMostrar.ForeColor = System.Drawing.Color.Navy;
             this.cbMostrar.Location = new System.Drawing.Point(50, 326);
@@ -326,29 +351,6 @@ namespace Elementos
             this.label8.Size = new System.Drawing.Size(271, 38);
             this.label8.TabIndex = 32;
             this.label8.Text = "Inicio de Sesion";
-            // 
-            // lblInvitado
-            // 
-            this.lblInvitado.AutoSize = true;
-            this.lblInvitado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblInvitado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInvitado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(158)))), ((int)(((byte)(188)))));
-            this.lblInvitado.Location = new System.Drawing.Point(91, 306);
-            this.lblInvitado.Name = "lblInvitado";
-            this.lblInvitado.Size = new System.Drawing.Size(137, 13);
-            this.lblInvitado.TabIndex = 18;
-            this.lblInvitado.Text = "Iniciar sesion como invitado";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(57)))), ((int)(((byte)(70)))));
-            this.label9.Location = new System.Drawing.Point(65, 36);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(261, 108);
-            this.label9.TabIndex = 19;
-            this.label9.Text = "Logo";
             // 
             // ucRegister
             // 
