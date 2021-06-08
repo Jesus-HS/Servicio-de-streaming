@@ -57,7 +57,6 @@ namespace Elementos
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -291,7 +290,6 @@ namespace Elementos
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.lblPreguntaInicio);
             this.panel3.Controls.Add(this.linkLabel2);
             this.panel3.Controls.Add(this.cbMostrar);
@@ -414,19 +412,11 @@ namespace Elementos
             this.label8.TabIndex = 32;
             this.label8.Text = "Inicio de Sesion";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(263, 359);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 94);
-            this.textBox1.TabIndex = 40;
-            // 
             // ucLog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(250)))), ((int)(((byte)(238)))));
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -475,6 +465,5 @@ namespace Elementos
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.Label lblPreguntaRegistro;
         private System.Windows.Forms.Label lblPreguntaInicio;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }

@@ -71,13 +71,21 @@ namespace Elementos
         /// </sumary>
         public string Consulta(string columna, string consulta)
         {
-            cn.Open();
-            cmd = new MySqlCommand(consulta, cn);
-            da = new MySqlDataAdapter(cmd);
-            dt = new DataTable();
-            da.Fill(dt);
-            cn.Close();
-            return dt.Rows[0][columna].ToString().Trim();
+            try
+            {
+                cn.Open();
+                cmd = new MySqlCommand(consulta, cn);
+                da = new MySqlDataAdapter(cmd);
+                dt = new DataTable();
+                da.Fill(dt);
+                cn.Close();
+                return dt.Rows[0][columna].ToString().Trim();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se obtener:" + ex);
+                return String.Empty;
+            }
         }
     }
 }
