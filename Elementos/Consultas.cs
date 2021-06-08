@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Data;
-using System.Data.SqlClient;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
@@ -12,7 +11,7 @@ namespace Elementos
         MySqlCommand cmd;
         DataTable dt;
         MySqlDataAdapter da;
-        DataSet ds;
+        DataSet ds = new DataSet();
 
 
         /// <summary> 
@@ -36,10 +35,12 @@ namespace Elementos
         {
             try
             {
+                cn.Open();
                 da = new MySqlDataAdapter(consulta, cn);
                 dt = new DataTable();
                 da.Fill(dt);
                 dgv.DataSource = dt;
+                cn.Close();
             }
             catch (Exception ex)
             {
@@ -54,8 +55,10 @@ namespace Elementos
         {
             try
             {
+                cn.Open();
                 cmd = new MySqlCommand(consulta, cn);
                 cmd.ExecuteNonQuery();
+                cn.Close();
             }
             catch (Exception ex)
             {
@@ -66,11 +69,15 @@ namespace Elementos
         /// <summary>
         /// Recibe 2 parametros, la columna del dato que se quiere recibir y la consulta
         /// </sumary>
-        public string Consulta(string columna,string consulta)
+        public string Consulta(string columna, string consulta)
         {
-            da = new MySqlDataAdapter(consulta, cn);
-            da.Fill(ds);
-            return ds.Tables[0].Rows[0][columna].ToString().Trim();
+            cn.Open();
+            cmd = new MySqlCommand(consulta, cn);
+            da = new MySqlDataAdapter(cmd);
+            dt = new DataTable();
+            da.Fill(dt);
+            cn.Close();
+            return dt.Rows[0][columna].ToString().Trim();
         }
     }
 }

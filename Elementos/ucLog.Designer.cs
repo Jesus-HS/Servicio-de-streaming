@@ -1,7 +1,7 @@
 ﻿
 namespace Elementos
 {
-    partial class ucRegister
+    partial class ucLog
     {
         /// <summary> 
         /// Variable del diseñador necesaria.
@@ -42,19 +42,22 @@ namespace Elementos
             this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.lblInvitado = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.cbMostrar = new System.Windows.Forms.CheckBox();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
+            this.btnRegistrarse = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.lblPreguntaRegistro = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lblPreguntaInicio = new System.Windows.Forms.Label();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.cbMostrar = new System.Windows.Forms.CheckBox();
+            this.btnIniciar = new System.Windows.Forms.Button();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -179,8 +182,8 @@ namespace Elementos
             // 
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.lblInvitado);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnIniciarSesion);
+            this.panel1.Controls.Add(this.btnRegistrarse);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(400, 500);
@@ -209,42 +212,43 @@ namespace Elementos
             this.lblInvitado.TabIndex = 18;
             this.lblInvitado.Text = "Iniciar sesion como invitado";
             // 
-            // button2
+            // btnIniciarSesion
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Verdana", 15.75F);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(93, 193);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(207, 49);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Iniciar sesion";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnIniciarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
+            this.btnIniciarSesion.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnIniciarSesion.FlatAppearance.BorderSize = 0;
+            this.btnIniciarSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIniciarSesion.Font = new System.Drawing.Font("Verdana", 15.75F);
+            this.btnIniciarSesion.ForeColor = System.Drawing.Color.White;
+            this.btnIniciarSesion.Location = new System.Drawing.Point(93, 193);
+            this.btnIniciarSesion.Name = "btnIniciarSesion";
+            this.btnIniciarSesion.Size = new System.Drawing.Size(207, 49);
+            this.btnIniciarSesion.TabIndex = 17;
+            this.btnIniciarSesion.Text = "Iniciar sesion";
+            this.btnIniciarSesion.UseVisualStyleBackColor = false;
+            this.btnIniciarSesion.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btnRegistrarse
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Verdana", 15.75F);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(93, 249);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(207, 49);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Registrarse";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnRegistrarse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
+            this.btnRegistrarse.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnRegistrarse.FlatAppearance.BorderSize = 0;
+            this.btnRegistrarse.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btnRegistrarse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrarse.Font = new System.Drawing.Font("Verdana", 15.75F);
+            this.btnRegistrarse.ForeColor = System.Drawing.Color.White;
+            this.btnRegistrarse.Location = new System.Drawing.Point(93, 249);
+            this.btnRegistrarse.Name = "btnRegistrarse";
+            this.btnRegistrarse.Size = new System.Drawing.Size(207, 49);
+            this.btnRegistrarse.TabIndex = 16;
+            this.btnRegistrarse.Text = "Registrarse";
+            this.btnRegistrarse.UseVisualStyleBackColor = false;
+            this.btnRegistrarse.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.lblPreguntaRegistro);
             this.panel2.Controls.Add(this.linkLabel1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.btnRegistrar);
@@ -260,11 +264,38 @@ namespace Elementos
             this.panel2.Size = new System.Drawing.Size(400, 500);
             this.panel2.TabIndex = 33;
             // 
+            // lblPreguntaRegistro
+            // 
+            this.lblPreguntaRegistro.AutoSize = true;
+            this.lblPreguntaRegistro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblPreguntaRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPreguntaRegistro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(158)))), ((int)(((byte)(188)))));
+            this.lblPreguntaRegistro.Location = new System.Drawing.Point(40, 341);
+            this.lblPreguntaRegistro.Name = "lblPreguntaRegistro";
+            this.lblPreguntaRegistro.Size = new System.Drawing.Size(188, 13);
+            this.lblPreguntaRegistro.TabIndex = 20;
+            this.lblPreguntaRegistro.Text = "¿Ya tienes cuenta?, Inicia sesión aquí";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkColor = System.Drawing.Color.Navy;
+            this.linkLabel1.Location = new System.Drawing.Point(302, 470);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(80, 18);
+            this.linkLabel1.TabIndex = 25;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Regresar";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.lblPreguntaInicio);
             this.panel3.Controls.Add(this.linkLabel2);
             this.panel3.Controls.Add(this.cbMostrar);
-            this.panel3.Controls.Add(this.btnIniciarSesion);
+            this.panel3.Controls.Add(this.btnIniciar);
             this.panel3.Controls.Add(this.txtPass);
             this.panel3.Controls.Add(this.txtUsuario);
             this.panel3.Controls.Add(this.label6);
@@ -274,6 +305,31 @@ namespace Elementos
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(400, 500);
             this.panel3.TabIndex = 33;
+            // 
+            // lblPreguntaInicio
+            // 
+            this.lblPreguntaInicio.AutoSize = true;
+            this.lblPreguntaInicio.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblPreguntaInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPreguntaInicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(158)))), ((int)(((byte)(188)))));
+            this.lblPreguntaInicio.Location = new System.Drawing.Point(47, 363);
+            this.lblPreguntaInicio.Name = "lblPreguntaInicio";
+            this.lblPreguntaInicio.Size = new System.Drawing.Size(179, 13);
+            this.lblPreguntaInicio.TabIndex = 26;
+            this.lblPreguntaInicio.Text = "¿No tienes cuenta?, Registrate aquí";
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel2.LinkColor = System.Drawing.Color.Navy;
+            this.linkLabel2.Location = new System.Drawing.Point(300, 470);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(80, 18);
+            this.linkLabel2.TabIndex = 39;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Regresar";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // cbMostrar
             // 
@@ -289,22 +345,22 @@ namespace Elementos
             this.cbMostrar.UseVisualStyleBackColor = false;
             this.cbMostrar.CheckedChanged += new System.EventHandler(this.cbMostrar_CheckedChanged);
             // 
-            // btnIniciarSesion
+            // btnIniciar
             // 
-            this.btnIniciarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
-            this.btnIniciarSesion.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnIniciarSesion.FlatAppearance.BorderSize = 0;
-            this.btnIniciarSesion.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.btnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIniciarSesion.Font = new System.Drawing.Font("Verdana", 15.75F);
-            this.btnIniciarSesion.ForeColor = System.Drawing.Color.White;
-            this.btnIniciarSesion.Location = new System.Drawing.Point(50, 373);
-            this.btnIniciarSesion.Name = "btnIniciarSesion";
-            this.btnIniciarSesion.Size = new System.Drawing.Size(123, 39);
-            this.btnIniciarSesion.TabIndex = 37;
-            this.btnIniciarSesion.Text = "Iniciar";
-            this.btnIniciarSesion.UseVisualStyleBackColor = false;
-            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click_1);
+            this.btnIniciar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
+            this.btnIniciar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnIniciar.FlatAppearance.BorderSize = 0;
+            this.btnIniciar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btnIniciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIniciar.Font = new System.Drawing.Font("Verdana", 15.75F);
+            this.btnIniciar.ForeColor = System.Drawing.Color.White;
+            this.btnIniciar.Location = new System.Drawing.Point(50, 399);
+            this.btnIniciar.Name = "btnIniciar";
+            this.btnIniciar.Size = new System.Drawing.Size(123, 39);
+            this.btnIniciar.TabIndex = 37;
+            this.btnIniciar.Text = "Iniciar";
+            this.btnIniciar.UseVisualStyleBackColor = false;
+            this.btnIniciar.Click += new System.EventHandler(this.btnIniciar_Click);
             // 
             // txtPass
             // 
@@ -358,33 +414,15 @@ namespace Elementos
             this.label8.TabIndex = 32;
             this.label8.Text = "Inicio de Sesion";
             // 
-            // linkLabel1
+            // textBox1
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.Navy;
-            this.linkLabel1.Location = new System.Drawing.Point(302, 470);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(80, 18);
-            this.linkLabel1.TabIndex = 25;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Regresar";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.textBox1.Location = new System.Drawing.Point(263, 359);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 94);
+            this.textBox1.TabIndex = 40;
             // 
-            // linkLabel2
-            // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel2.LinkColor = System.Drawing.Color.Navy;
-            this.linkLabel2.Location = new System.Drawing.Point(300, 470);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(80, 18);
-            this.linkLabel2.TabIndex = 39;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Regresar";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
-            // 
-            // ucRegister
+            // ucLog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -394,7 +432,7 @@ namespace Elementos
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label2);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Name = "ucRegister";
+            this.Name = "ucLog";
             this.Size = new System.Drawing.Size(1205, 504);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -423,17 +461,20 @@ namespace Elementos
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.CheckBox cbMostrar;
-        private System.Windows.Forms.Button btnIniciarSesion;
+        private System.Windows.Forms.Button btnIniciar;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.TextBox txtUsuario;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnIniciarSesion;
+        private System.Windows.Forms.Button btnRegistrarse;
         private System.Windows.Forms.Label lblInvitado;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.Label lblPreguntaRegistro;
+        private System.Windows.Forms.Label lblPreguntaInicio;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

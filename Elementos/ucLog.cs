@@ -5,9 +5,9 @@ using System.Drawing;
 
 namespace Elementos
 {
-    public partial class ucRegister : UserControl
+    public partial class ucLog : UserControl
     {
-        public ucRegister()
+        public ucLog()
         {
             InitializeComponent();
             panel1.Location = new Point(0, 0);
@@ -26,8 +26,7 @@ namespace Elementos
         {
             if (Validarcampos())
             {
-                query.Consulta("INSERT INTO usuarios (nombreUsuariO, contraseñaUsuario) VALUES ('" + txtUser.Text + "', '" + txtPassword.Text + "')");
-                MessageBox.Show("Se registro el usuario.");
+                query.Consulta("CALL insertarUsuario ('" + txtUser.Text + "', '" + txtPassword.Text + "')");
             }
         }
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -62,51 +61,34 @@ namespace Elementos
 
             return ok;
         }
-
-        private void btnIniciarSesion_Click(object sender, EventArgs e)
-        {
-            string consulta = string.Format("SELECT * FROM usuarios WHERE nombreUsuario = '{0}' " +
-                "AND contraseñaUsuario = '{1}'", txtUser.Text.Trim(), txtPassword.Text.Trim());
-            
-            id = query.Consulta("idUsuario", consulta);
-
-            string account = query.Consulta("nombreUsuario", consulta);
-            string pass = query.Consulta("contrasenaUsuario", consulta);
-
-            /* Si los datos almacenados en las variables corresponden a los mismo que los ingresados en
-               las cajas de texto entonces nos lanza el formulario principal */
-            if (account == txtUser.Text.Trim() && pass == txtPassword.Text.Trim())
-            {
-                
-            }
-        }
         private void button1_Click(object sender, EventArgs e)
         {
+            //Registrarse
             panel1.Hide();
-            panel2.Show();
+            panel2.Show();panel2.Location = new Point(0, 0);
+            panel3.Hide();
 
         }
         private void button2_Click(object sender, EventArgs e)
         {
+            //Iniciar sesion
             panel1.Hide();
-            panel3.Show();
+            panel2.Hide();
+            panel3.Show();panel3.Location = new Point(0, 0);
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            //Patras de registrarse
             panel2.Hide();
             panel1.Show();
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            //Patras de iniciar sesion
             panel3.Hide();
             panel1.Show();
-        }
-
-        private void btnIniciarSesion_Click_1(object sender, EventArgs e)
-        {
-
         }
 
         private void cbMostrar_CheckedChanged(object sender, EventArgs e)
@@ -123,6 +105,22 @@ namespace Elementos
             else
             {
                 txtPass.PasswordChar = '*';
+            }
+        }
+
+        private void btnIniciar_Click(object sender, EventArgs e)
+        {
+            string consulta = string.Format("SELECT * FROM usuarios WHERE nombreUsuario = '" + txtUsuario.Text.Trim() + "' AND contrasenaUsuario = '" + txtPass.Text.Trim() + "'");
+
+            id = query.Consulta("idUsuario", consulta);
+            string account = query.Consulta("nombreUsuario", consulta);
+            string pass = query.Consulta("contrasenaUsuario", consulta);
+
+            /* Si los datos almacenados en las variables corresponden a los mismo que los ingresados en
+               las cajas de texto entonces nos lanza el formulario principal */
+            if (account == txtUsuario.Text.Trim() && pass == txtPass.Text.Trim())
+            {
+                MessageBox.Show("Funciona");
             }
         }
     }

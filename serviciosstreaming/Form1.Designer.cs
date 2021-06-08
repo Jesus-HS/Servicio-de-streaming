@@ -33,7 +33,7 @@ namespace serviciosstreaming
             this.panelInicio = new System.Windows.Forms.Panel();
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ucRegister1 = new Elementos.ucRegister();
+            this.ucRegister1 = new Elementos.ucLog();
             this.panelInicio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -107,7 +107,7 @@ namespace serviciosstreaming
         private System.Windows.Forms.Panel panelInicio;
         private System.Windows.Forms.Label lblBienvenido;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Elementos.ucRegister ucRegister1;
+        private Elementos.ucLog ucRegister1;
     }
 }
 
