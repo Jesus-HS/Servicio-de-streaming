@@ -20,9 +20,10 @@ namespace serviciosstreaming
             InitializeComponent();
         }
 
-        private void panelInicio_Paint(object sender, PaintEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            frmPeliculas frmPelica = new frmPeliculas();
+            frmPelica.Show();
         }
     }
 }

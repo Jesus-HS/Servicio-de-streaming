@@ -5,13 +5,15 @@ using MySql.Data.MySqlClient;
 
 namespace Elementos
 {
-    class Consultas
+
+    public class Consultas
     {
-        MySqlConnection cn;
-        MySqlCommand cmd;
-        DataTable dt;
-        MySqlDataAdapter da;
-        DataSet ds = new DataSet();
+
+        public MySqlConnection cn = new MySqlConnection();
+        public MySqlCommand cmd = new MySqlCommand();
+        private DataTable dt;
+        private MySqlDataAdapter da;
+        
 
 
         /// <summary> 
@@ -85,6 +87,24 @@ namespace Elementos
             {
                 MessageBox.Show("No se obtener:" + ex);
                 return String.Empty;
+            }
+        }
+        public DataTable obtenerTabla(string consulta)
+        {
+            try
+            {
+                cn.Open();
+                cmd = new MySqlCommand(consulta, cn);
+                da = new MySqlDataAdapter(cmd);
+                dt = new DataTable();
+                da.Fill(dt);
+                cn.Close();
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se obtener:" + ex);
+                return null;
             }
         }
     }

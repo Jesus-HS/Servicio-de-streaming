@@ -31,9 +31,10 @@ namespace serviciosstreaming
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelInicio = new System.Windows.Forms.Panel();
+            this.ucRegister1 = new Elementos.ucLog();
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ucRegister1 = new Elementos.ucLog();
+            this.button1 = new System.Windows.Forms.Button();
             this.panelInicio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -41,13 +42,22 @@ namespace serviciosstreaming
             // panelInicio
             // 
             this.panelInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(250)))), ((int)(((byte)(238)))));
+            this.panelInicio.Controls.Add(this.button1);
             this.panelInicio.Controls.Add(this.ucRegister1);
             this.panelInicio.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelInicio.Location = new System.Drawing.Point(588, 0);
             this.panelInicio.Name = "panelInicio";
             this.panelInicio.Size = new System.Drawing.Size(389, 504);
             this.panelInicio.TabIndex = 0;
-            this.panelInicio.Paint += new System.Windows.Forms.PaintEventHandler(this.panelInicio_Paint);
+            // 
+            // ucRegister1
+            // 
+            this.ucRegister1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(250)))), ((int)(((byte)(238)))));
+            this.ucRegister1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ucRegister1.Location = new System.Drawing.Point(0, 0);
+            this.ucRegister1.Name = "ucRegister1";
+            this.ucRegister1.Size = new System.Drawing.Size(1205, 504);
+            this.ucRegister1.TabIndex = 0;
             // 
             // lblBienvenido
             // 
@@ -57,7 +67,7 @@ namespace serviciosstreaming
             this.lblBienvenido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(250)))), ((int)(((byte)(238)))));
             this.lblBienvenido.Location = new System.Drawing.Point(12, 26);
             this.lblBienvenido.Name = "lblBienvenido";
-            this.lblBienvenido.Size = new System.Drawing.Size(427, 72);
+            this.lblBienvenido.Size = new System.Drawing.Size(426, 75);
             this.lblBienvenido.TabIndex = 1;
             this.lblBienvenido.Text = "Bienvenido a";
             // 
@@ -71,14 +81,15 @@ namespace serviciosstreaming
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
-            // ucRegister1
+            // button1
             // 
-            this.ucRegister1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(250)))), ((int)(((byte)(238)))));
-            this.ucRegister1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ucRegister1.Location = new System.Drawing.Point(0, 0);
-            this.ucRegister1.Name = "ucRegister1";
-            this.ucRegister1.Size = new System.Drawing.Size(1205, 504);
-            this.ucRegister1.TabIndex = 0;
+            this.button1.Location = new System.Drawing.Point(302, 469);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
@@ -108,6 +119,7 @@ namespace serviciosstreaming
         private System.Windows.Forms.Label lblBienvenido;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Elementos.ucLog ucRegister1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
