@@ -53,7 +53,6 @@ C:\Users\melis\OneDrive\Escritorio\Nueva carpeta (4)\serviciosstreaming\bin\Debu
 C:\Users\melis\OneDrive\Escritorio\Nueva carpeta (4)\serviciosstreaming\bin\Debug\Elementos.dll
 C:\Users\melis\OneDrive\Escritorio\Nueva carpeta (4)\serviciosstreaming\bin\Debug\Elementos.pdb
 C:\Users\melis\OneDrive\Escritorio\Nueva carpeta (4)\serviciosstreaming\obj\Debug\serviciosstreaming.csproj.CopyComplete
-C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\bin\Debug\MySql.Data.dll
 C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\bin\Debug\Google.Protobuf.dll
 C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\bin\Debug\Zstandard.Net.dll
 C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\bin\Debug\K4os.Compression.LZ4.Streams.dll
@@ -113,3 +112,4 @@ C:\Users\Velasques\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\obj
 C:\Users\Velasques\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\obj\Debug\serviciosstreaming.csproj.CopyComplete
 C:\Users\Velasques\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\obj\Debug\serviciosstreaming.exe
 C:\Users\Velasques\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\obj\Debug\serviciosstreaming.pdb
+C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\obj\Debug\serviciosstreaming.frmPeliculas.resources

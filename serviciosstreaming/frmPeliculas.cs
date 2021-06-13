@@ -16,28 +16,23 @@ namespace serviciosstreaming
 {
     public partial class frmPeliculas : Form
     {
+        string[] categorias;
+        Consultas consultas = new Consultas();
+        DataTable dt;
         public frmPeliculas()
         {
             InitializeComponent();
-
-            List<string> list = new List<string>();
-            //obtener consulta categorias
             dt = new DataTable();
-            dt = consultas.obtenerTabla("SELECT *FROM generos");
-
-            foreach (string item in list)
+            dt = consultas.obtenerTabla("SELECT nombreGenero FROM generos");
+            categorias = new string[dt.Rows.Count];
+            for (int i = 0; i < dt.Rows.Count; i++)
             {
-                list.Add(dt.Rows[0]["nombreGenero"].ToString().Trim());
-            }
-            foreach (var item in list)
-            {
-                cbCategorias.Items.Add(item);
+                cbGeneros.Items.Add(dt.Rows[i].ItemArray[0].ToString());
             }
         }
 
-
-        Consultas consultas = new Consultas();
-        DataTable dt;
+        
+        
         private void btnCargar_Click(object sender, EventArgs e)
         {
             

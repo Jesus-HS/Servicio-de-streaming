@@ -34,7 +34,6 @@ namespace serviciosstreaming
             this.ucRegister1 = new Elementos.ucLog();
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.panelInicio.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -42,10 +41,9 @@ namespace serviciosstreaming
             // panelInicio
             // 
             this.panelInicio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(250)))), ((int)(((byte)(238)))));
-            this.panelInicio.Controls.Add(this.button1);
             this.panelInicio.Controls.Add(this.ucRegister1);
             this.panelInicio.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelInicio.Location = new System.Drawing.Point(588, 0);
+            this.panelInicio.Location = new System.Drawing.Point(454, 0);
             this.panelInicio.Name = "panelInicio";
             this.panelInicio.Size = new System.Drawing.Size(389, 504);
             this.panelInicio.TabIndex = 0;
@@ -54,9 +52,9 @@ namespace serviciosstreaming
             // 
             this.ucRegister1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(250)))), ((int)(((byte)(238)))));
             this.ucRegister1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ucRegister1.Location = new System.Drawing.Point(0, 0);
+            this.ucRegister1.Location = new System.Drawing.Point(3, 0);
             this.ucRegister1.Name = "ucRegister1";
-            this.ucRegister1.Size = new System.Drawing.Size(1205, 504);
+            this.ucRegister1.Size = new System.Drawing.Size(383, 504);
             this.ucRegister1.TabIndex = 0;
             // 
             // lblBienvenido
@@ -67,36 +65,26 @@ namespace serviciosstreaming
             this.lblBienvenido.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(250)))), ((int)(((byte)(238)))));
             this.lblBienvenido.Location = new System.Drawing.Point(12, 26);
             this.lblBienvenido.Name = "lblBienvenido";
-            this.lblBienvenido.Size = new System.Drawing.Size(426, 75);
+            this.lblBienvenido.Size = new System.Drawing.Size(427, 72);
             this.lblBienvenido.TabIndex = 1;
             this.lblBienvenido.Text = "Bienvenido a";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::serviciosstreaming.Properties.Resources.popcorn__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(93, -24);
+            this.pictureBox1.Image = global::serviciosstreaming.Properties.Resources.claqueta;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 101);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(595, 558);
+            this.pictureBox1.Size = new System.Drawing.Size(448, 446);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(302, 469);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
-            this.ClientSize = new System.Drawing.Size(977, 504);
+            this.ClientSize = new System.Drawing.Size(843, 504);
             this.Controls.Add(this.lblBienvenido);
             this.Controls.Add(this.panelInicio);
             this.Controls.Add(this.pictureBox1);
@@ -119,7 +107,6 @@ namespace serviciosstreaming
         private System.Windows.Forms.Label lblBienvenido;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Elementos.ucLog ucRegister1;
-        private System.Windows.Forms.Button button1;
     }
 }
 

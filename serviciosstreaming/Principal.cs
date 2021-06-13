@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Elementos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +14,7 @@ namespace serviciosstreaming
 {
     public partial class Principal : Form
     {
+        Consultas consultas = new Consultas();
         public Principal()
         {
             InitializeComponent();
@@ -56,6 +59,32 @@ namespace serviciosstreaming
         private void button2_Click(object sender, EventArgs e)
         {
            
+        }
+        private void Principal_Load(object sender, EventArgs e)
+        {
+            DataTable dt = new DataTable();
+            dt = consultas.obtenerTabla("SELECT idPelicula, portadaPelicula FROM peliculas");
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                PictureBox pb = new PictureBox();
+                pb.Name = dt.Rows[i].ItemArray[0].ToString();
+                pb.Size = new Size(134, 182);
+
+                byte[] MisDatos = new byte[0];
+                
+                MisDatos = (byte[])dt.Rows[i]["portadaPelicula"];
+                MemoryStream ms = new MemoryStream(MisDatos);
+                pb.Image = Image.FromStream(ms);
+                ms.Position = 0;
+
+                pb.Click += new EventHandler(mostrar_click);
+                flpPeliculas.Controls.Add(pb);
+            }
+        }
+
+        private void mostrar_click(object sender, EventArgs e)
+        {
+
         }
     }
 }
