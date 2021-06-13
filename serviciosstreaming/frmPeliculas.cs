@@ -67,15 +67,7 @@ namespace serviciosstreaming
 
         private void btnCargarCategoria_Click(object sender, EventArgs e)
         {
-            //List<string> list = new List<string>();
-            ////obtener consulta categorias
-            //dt = new DataTable();
-            //dt = consultas.obtenerTabla("SELECT *FROM generos");
-
-            //foreach (string item in list)
-            //{
-            //    list.Add(dt.Rows[0]["nombreGenero"].ToString().Trim());
-            //}
+            
             
             //cargar a lista
             //mostrar lista

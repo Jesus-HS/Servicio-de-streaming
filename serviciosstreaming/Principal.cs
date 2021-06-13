@@ -43,22 +43,9 @@ namespace serviciosstreaming
                 submenu.Visible = false;
             }
         }
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
         private void button4_Click(object sender, EventArgs e)
         {
             Show(panel2);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-           
         }
         private void Principal_Load(object sender, EventArgs e)
         {
@@ -69,6 +56,8 @@ namespace serviciosstreaming
                 PictureBox pb = new PictureBox();
                 pb.Name = dt.Rows[i].ItemArray[0].ToString();
                 pb.Size = new Size(134, 182);
+                pb.SizeMode = PictureBoxSizeMode.StretchImage;
+                pb.Cursor = Cursors.Hand;
 
                 byte[] MisDatos = new byte[0];
                 
