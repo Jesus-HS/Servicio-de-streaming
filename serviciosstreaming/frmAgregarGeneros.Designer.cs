@@ -29,6 +29,7 @@ namespace serviciosstreaming
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregarGeneros));
             this.dgvGeneros = new System.Windows.Forms.DataGridView();
             this.btnAgregarGenero = new System.Windows.Forms.Button();
             this.txtGenero = new System.Windows.Forms.TextBox();
@@ -46,12 +47,20 @@ namespace serviciosstreaming
             // 
             // btnAgregarGenero
             // 
+            this.btnAgregarGenero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
+            this.btnAgregarGenero.FlatAppearance.BorderSize = 0;
+            this.btnAgregarGenero.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+<<<<<<< HEAD
+            this.btnAgregarGenero.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+=======
+            this.btnAgregarGenero.ForeColor = System.Drawing.Color.White;
+>>>>>>> 37963eaa9110dd0fa6608ce883e6b728e04aa62e
             this.btnAgregarGenero.Location = new System.Drawing.Point(12, 38);
             this.btnAgregarGenero.Name = "btnAgregarGenero";
             this.btnAgregarGenero.Size = new System.Drawing.Size(100, 23);
             this.btnAgregarGenero.TabIndex = 4;
             this.btnAgregarGenero.Text = "Agregar";
-            this.btnAgregarGenero.UseVisualStyleBackColor = true;
+            this.btnAgregarGenero.UseVisualStyleBackColor = false;
             this.btnAgregarGenero.Click += new System.EventHandler(this.btnAgregarGenero_Click);
             // 
             // txtGenero
@@ -65,12 +74,23 @@ namespace serviciosstreaming
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(336, 173);
             this.Controls.Add(this.dgvGeneros);
             this.Controls.Add(this.btnAgregarGenero);
             this.Controls.Add(this.txtGenero);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+<<<<<<< HEAD
             this.Name = "frmAgregarGeneros";
-            this.Text = "frmAgregarGeneros";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Agregar Generos";
+=======
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "frmAgregarGeneros";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Agregar generos";
+>>>>>>> 37963eaa9110dd0fa6608ce883e6b728e04aa62e
             ((System.ComponentModel.ISupportInitialize)(this.dgvGeneros)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

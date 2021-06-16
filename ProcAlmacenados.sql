@@ -43,7 +43,7 @@ END $$
 DELIMITER $$
 CREATE PROCEDURE insertarUsuario(IN nombre varchar(20) , contrasena varchar (20))
 BEGIN
-    INSERT INTO usuarios VALUES(DEFAULT,nombre,contrasena);
+    INSERT INTO usuarios VALUES(DEFAULT,nombre,contrasena,false);
 END $$
 
 DELIMITER $$
@@ -80,4 +80,40 @@ DELIMITER $$
 CREATE PROCEDURE insertarCategoria(IN idPelicula int,idGenero int)
 BEGIN
     INSERT INTO directores VALUES(DEFAULT,idPelicula ,idGenero);
+END $$
+
+DELIMITER $$
+CREATE PROCEDURE mostrarGeneros(IN idPelicula int)
+BEGIN
+    SELECT generos.nombreGenero FROM generos
+	INNER JOIN categorias ON generos.idgenero = categorias.idgenero 
+	INNER JOIN peliculas ON categorias.idpelicula = peliculas.idpelicula
+	WHERE peliculas.idpelicula = idPelicula;
+END $$
+
+DELIMITER $$
+CREATE PROCEDURE mostrarPlataformas(IN idPelicula int)
+BEGIN
+    SELECT plataformas.nombrePlataforma FROM plataformas
+	INNER JOIN contiene ON plataformas.idPlataforma = contiene.idplataforma 
+	INNER JOIN peliculas ON contiene.idpelicula = peliculas.idpelicula
+	WHERE peliculas.idpelicula = idPelicula;
+END $$
+
+DELIMITER $$
+CREATE PROCEDURE mostrarDirectores(IN idPelicula int)
+BEGIN
+    SELECT directores.nombreDirector FROM directores 
+	INNER JOIN cordinadores ON directores.iddirector = cordinadores.iddirector 
+	INNER JOIN peliculas ON cordinadores.idpelicula = peliculas.idpelicula
+	WHERE peliculas.idpelicula = idPelicula;
+END $$
+
+DELIMITER $$
+CREATE PROCEDURE mostrarActores(IN idPelicula int)
+BEGIN
+    SELECT actores.nombreActor FROM actores 
+	INNER JOIN interpretes ON actores.idactor = interpretes.idactor 
+	INNER JOIN peliculas ON interpretes.idpelicula = peliculas.idpelicula
+	WHERE peliculas.idpelicula = idPelicula;
 END $$

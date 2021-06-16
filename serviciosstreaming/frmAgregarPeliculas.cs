@@ -13,6 +13,7 @@ namespace serviciosstreaming
     {
         Consultas consultas = new Consultas();
         DataTable dt;
+        string idPelicula;
         public frmAgregarPeliculas()
         {
             InitializeComponent();
@@ -38,6 +39,11 @@ namespace serviciosstreaming
             dt = consultas.obtenerTabla("SELECT nombreDirector FROM directores");
             for (int i = 0; i < dt.Rows.Count; i++)
                 cbDirectores.Items.Add(dt.Rows[i].ItemArray[0].ToString());
+
+            //CARGAR PLATAFORMAS
+            dt = consultas.obtenerTabla("SELECT nombrePlataforma FROM plataformas");
+            for (int i = 0; i < dt.Rows.Count; i++)
+                cbPlataformas.Items.Add(dt.Rows[i].ItemArray[0].ToString());
 
             dgvPeliculas.DataSource = consultas.obtenerTabla("SELECT nombrePelicula FROM peliculas");
         }
@@ -70,7 +76,6 @@ namespace serviciosstreaming
                 cbGeneroPelicula.Items.Clear();
             }
         }
-
         private void btnCargarFoto_Click(object sender, EventArgs e)
         {
             //textodeformato(*.formato) | *.formato | otroformato(*.formato2 *) | *.formato2
@@ -100,10 +105,76 @@ namespace serviciosstreaming
 
             cbGeneroPelicula.Items.Clear();
 
-            dt = consultas.obtenerTabla("SELECT nombreGenero FROM generos");
+            dt = consultas.obtenerTabla("CALL mostrarGeneros("+idPelicula+")");
             for (int i = 0; i < dt.Rows.Count; i++)
                 cbGeneroPelicula.Items.Add(dt.Rows[i].ItemArray[0].ToString());
+<<<<<<< HEAD
+        }
 
+        private void btnCargarPlataforma_Click(object sender, EventArgs e)
+        {
+            string consulta = "SELECT idPlataforma FROM plataformas WHERE nombrePlataforma = '" + cbPlataformas.Text + "'";
+            DataTable dt = consultas.obtenerTabla(consulta);
+            string idPlataforma = dt.Rows[0].ItemArray[0].ToString().Trim();
+
+            consulta = "SELECT idPelicula FROM peliculas WHERE nombrePelicula = '" + txtNomPelicula.Text + "'";
+            dt = consultas.obtenerTabla(consulta);
+            string idPelicula = dt.Rows[0].ItemArray[0].ToString().Trim();
+
+            consulta = "CALL insertarContiene(" + idPelicula + "," + idPlataforma + ")";
+            consultas.Consulta(consulta);
+
+            cbPlataformaPelicula.Items.Clear();
+
+            dt = consultas.obtenerTabla("CALL mostrarPlataformas("+idPelicula+")");
+            for (int i = 0; i < dt.Rows.Count; i++)
+                cbPlataformaPelicula.Items.Add(dt.Rows[i].ItemArray[0].ToString());
+        }
+
+        private void btnCargarPelicula_Click(object sender, EventArgs e)
+        {
+            txtNomPelicula.Text = dgvPeliculas.CurrentCell.Value.ToString();
+            DataTable dt = consultas.obtenerTabla("SELECT *FROM peliculas WHERE nombrePelicula = '" + txtNomPelicula.Text + "'");
+            idPelicula = dt.Rows[0]["idPelicula"].ToString().Trim();
+            richDescripcion.Text = dt.Rows[0]["descripcionPelicula"].ToString();
+
+            dt = consultas.obtenerTabla("CALL mostrarPlataformas(" + idPelicula + ")");
+            for (int i = 0; i < dt.Rows.Count; i++)
+                cbPlataformaPelicula.Items.Add(dt.Rows[i].ItemArray[0].ToString());
+
+            dt = consultas.obtenerTabla("CALL mostrarGeneros(" + idPelicula + ")");
+            for (int i = 0; i < dt.Rows.Count; i++)
+                cbGeneroPelicula.Items.Add(dt.Rows[i].ItemArray[0].ToString());
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            consultas.Consulta("UPDATE peliculas SET nombrePelicula = '" + txtNomPelicula.Text + "', descripcionPelicula = '" + richDescripcion.Text + "' WHERE idPelicula =" + idPelicula);
+        }
+
+        private void btnCargarActores_Click(object sender, EventArgs e)
+        {
+            //OBTENEMOS ID DEL ACTOR
+            string consulta = "SELECT idActores FROM plataformas WHERE nombreActor = '" + cbActores.Text + "'";
+            DataTable dt = consultas.obtenerTabla(consulta);
+            string idActor = dt.Rows[0].ItemArray[0].ToString().Trim();
+
+            //OBTENEMOS ID DE LA PELICULA
+            consulta = "SELECT idPelicula FROM peliculas WHERE nombrePelicula = '" + txtNomPelicula.Text + "'";
+            dt = consultas.obtenerTabla(consulta);
+            string idPelicula = dt.Rows[0].ItemArray[0].ToString().Trim();
+
+            //INGRESAMOS los valores a
+            consulta = "CALL insertarInterpretes(" + idActor + "," + idPelicula + ")";
+            consultas.Consulta(consulta);
+
+            cbPlataformaPelicula.Items.Clear();
+
+            dt = consultas.obtenerTabla("CALL mostrarPlataformas(" + idPelicula + ")");
+            for (int i = 0; i < dt.Rows.Count; i++)
+                cbPlataformaPelicula.Items.Add(dt.Rows[i].ItemArray[0].ToString());
+=======
+>>>>>>> 37963eaa9110dd0fa6608ce883e6b728e04aa62e
         }
     }
 }

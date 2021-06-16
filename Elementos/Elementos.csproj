@@ -93,20 +93,11 @@
     <Compile Include="ucComentarios.Designer.cs">
       <DependentUpon>ucComentarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucLog.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ucLog.Designer.cs">
-      <DependentUpon>ucLog.cs</DependentUpon>
-    </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ucComentarios.resx">
       <DependentUpon>ucComentarios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ucLog.resx">
-      <DependentUpon>ucLog.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -8,11 +8,15 @@ namespace serviciosstreaming
 {
     public partial class frmMostrarPelicula : Form
     {
-        public frmMostrarPelicula(string idPelicula)
+        string _idUsuario, _idPelicula;
+        public frmMostrarPelicula(string idPelicula, string idUsuario)
         {
             InitializeComponent();
+            _idUsuario = idUsuario;
+            _idPelicula = idPelicula;
             cargarPortada(idPelicula);
             cargarComentarios(idPelicula);
+            cargarInformacion(idPelicula);
         }
         Consultas query = new Consultas();
         void cargarPortada(string id)
@@ -53,6 +57,39 @@ namespace serviciosstreaming
                 //Agregar el control (comentario)
                 panelComentarios.Controls.Add(comentario);
             }
+        }
+
+        void cargarInformacion(string id)
+        {
+            DataTable dt = query.obtenerTabla("SELECT *FROM peliculas WHERE idPelicula = " + id);
+            lblPelicula.Text = dt.Rows[0]["nombrePelicula"].ToString();
+            txtDescripcion.Text = dt.Rows[0]["descripcionPelicula"].ToString();
+
+            //Plataforma
+            dt = query.obtenerTabla("CALL mostrarPlataformas(" + id + ")");
+            for (int i = 0; i < dt.Rows.Count; i++)
+                cbPlataformas.Items.Add(dt.Rows[i].ItemArray[0].ToString());
+
+            //Generos
+            dt = query.obtenerTabla("CALL mostrarGeneros("+id+")");
+            for (int i = 0; i < dt.Rows.Count; i++)
+                cbGeneros.Items.Add(dt.Rows[i].ItemArray[0].ToString());
+
+            //Actores
+            dt = query.obtenerTabla("CALL mostrarActores(" + id + ")");
+            for (int i = 0; i < dt.Rows.Count; i++)
+                cbActores.Items.Add(dt.Rows[i].ItemArray[0].ToString());
+
+            //Directores
+            dt = query.obtenerTabla("CALL mostrarDirectores(" + id + ")");
+            for (int i = 0; i < dt.Rows.Count; i++)
+                cbDirectores.Items.Add(dt.Rows[i].ItemArray[0].ToString());
+        }
+        private void btnPublicar_Click(object sender, System.EventArgs e)
+        {
+            panelComentarios.Controls.Clear();
+            query.Consulta("CALL insertarComentario(" + _idUsuario + ",'" + richComentar.Text + "', " + _idPelicula + ")");
+            cargarComentarios(_idPelicula);
         }
     }
 }

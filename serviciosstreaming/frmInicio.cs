@@ -20,5 +20,10 @@ namespace serviciosstreaming
             InitializeComponent();
             lblTitulo.Text = Text;
         }
+
+        private void ucLog1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

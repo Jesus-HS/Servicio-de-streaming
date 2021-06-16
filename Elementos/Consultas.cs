@@ -65,7 +65,7 @@ namespace Elementos
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No se obtener:" + ex);
+                MessageBox.Show("No se logro obtener:" + ex);
                 return null;
             }
         }
