@@ -84,7 +84,6 @@ namespace Elementos
                 ep.SetError(txtPasswordC, "Las contraseñas no concuerdan.");
             else
                 ok = true;
-
             return ok;
         }
         private void button1_Click(object sender, EventArgs e)
@@ -131,5 +130,22 @@ namespace Elementos
             }
         }
         #endregion
+
+        private void lblPreguntaRegistro_Click(object sender, EventArgs e)
+        {
+            //Ir al inico de sesión
+            panel2.Hide();
+            panel3.Show();
+        }
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void lblPreguntaInicio_Click(object sender, EventArgs e)
+        {
+            //Ir al registro de usuario
+            panel3.Hide();
+            panel2.Show();
+        }
     }
 }

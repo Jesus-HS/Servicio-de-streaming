@@ -29,6 +29,7 @@ namespace serviciosstreaming
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregarDirectores));
             this.dgvDirectores = new System.Windows.Forms.DataGridView();
             this.btnAgregarDirector = new System.Windows.Forms.Button();
             this.txtDirector = new System.Windows.Forms.TextBox();
@@ -46,12 +47,16 @@ namespace serviciosstreaming
             // 
             // btnAgregarDirector
             // 
+            this.btnAgregarDirector.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
+            this.btnAgregarDirector.FlatAppearance.BorderSize = 0;
+            this.btnAgregarDirector.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarDirector.ForeColor = System.Drawing.Color.White;
             this.btnAgregarDirector.Location = new System.Drawing.Point(12, 38);
             this.btnAgregarDirector.Name = "btnAgregarDirector";
             this.btnAgregarDirector.Size = new System.Drawing.Size(100, 23);
             this.btnAgregarDirector.TabIndex = 4;
             this.btnAgregarDirector.Text = "Agregar";
-            this.btnAgregarDirector.UseVisualStyleBackColor = true;
+            this.btnAgregarDirector.UseVisualStyleBackColor = false;
             this.btnAgregarDirector.Click += new System.EventHandler(this.btnAgregarDirector_Click);
             // 
             // txtDirector
@@ -69,8 +74,13 @@ namespace serviciosstreaming
             this.Controls.Add(this.dgvDirectores);
             this.Controls.Add(this.btnAgregarDirector);
             this.Controls.Add(this.txtDirector);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmAgregarDirectores";
-            this.Text = "frmAgregarDirectores";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Agregar directores";
+            this.Load += new System.EventHandler(this.frmAgregarDirectores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDirectores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

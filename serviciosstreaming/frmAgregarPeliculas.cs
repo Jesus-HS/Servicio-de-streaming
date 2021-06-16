@@ -70,7 +70,6 @@ namespace serviciosstreaming
                 cbGeneroPelicula.Items.Clear();
             }
         }
-
         private void btnCargarFoto_Click(object sender, EventArgs e)
         {
             //textodeformato(*.formato) | *.formato | otroformato(*.formato2 *) | *.formato2
@@ -103,7 +102,6 @@ namespace serviciosstreaming
             dt = consultas.obtenerTabla("SELECT nombreGenero FROM generos");
             for (int i = 0; i < dt.Rows.Count; i++)
                 cbGeneroPelicula.Items.Add(dt.Rows[i].ItemArray[0].ToString());
-
         }
     }
 }

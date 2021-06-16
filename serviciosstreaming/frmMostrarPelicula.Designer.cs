@@ -29,6 +29,7 @@ namespace serviciosstreaming
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMostrarPelicula));
             this.lblPelicula = new System.Windows.Forms.Label();
             this.richDescripcion = new System.Windows.Forms.RichTextBox();
             this.panelActores = new System.Windows.Forms.FlowLayoutPanel();
@@ -120,8 +121,12 @@ namespace serviciosstreaming
             this.Controls.Add(this.richDescripcion);
             this.Controls.Add(this.lblPelicula);
             this.Controls.Add(this.pbPortada);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmMostrarPelicula";
-            this.Text = "frmMostrarPelicula";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Pelicula";
             this.panelComentarios.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbPortada)).EndInit();
             this.ResumeLayout(false);

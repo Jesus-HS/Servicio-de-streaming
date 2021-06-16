@@ -68,7 +68,7 @@ namespace Elementos
             this.checkBox1.BackColor = System.Drawing.Color.Transparent;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.ForeColor = System.Drawing.Color.Navy;
-            this.checkBox1.Location = new System.Drawing.Point(43, 357);
+            this.checkBox1.Location = new System.Drawing.Point(43, 339);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(161, 24);
             this.checkBox1.TabIndex = 22;
@@ -262,6 +262,7 @@ namespace Elementos
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(400, 500);
             this.panel2.TabIndex = 33;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // lblPreguntaRegistro
             // 
@@ -269,18 +270,19 @@ namespace Elementos
             this.lblPreguntaRegistro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblPreguntaRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPreguntaRegistro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(158)))), ((int)(((byte)(188)))));
-            this.lblPreguntaRegistro.Location = new System.Drawing.Point(40, 341);
+            this.lblPreguntaRegistro.Location = new System.Drawing.Point(40, 366);
             this.lblPreguntaRegistro.Name = "lblPreguntaRegistro";
             this.lblPreguntaRegistro.Size = new System.Drawing.Size(188, 13);
             this.lblPreguntaRegistro.TabIndex = 20;
             this.lblPreguntaRegistro.Text = "¿Ya tienes cuenta?, Inicia sesión aquí";
+            this.lblPreguntaRegistro.Click += new System.EventHandler(this.lblPreguntaRegistro_Click);
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.Navy;
-            this.linkLabel1.Location = new System.Drawing.Point(302, 470);
+            this.linkLabel1.Location = new System.Drawing.Point(291, 446);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(80, 18);
             this.linkLabel1.TabIndex = 25;
@@ -310,18 +312,19 @@ namespace Elementos
             this.lblPreguntaInicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lblPreguntaInicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPreguntaInicio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(158)))), ((int)(((byte)(188)))));
-            this.lblPreguntaInicio.Location = new System.Drawing.Point(47, 363);
+            this.lblPreguntaInicio.Location = new System.Drawing.Point(47, 343);
             this.lblPreguntaInicio.Name = "lblPreguntaInicio";
             this.lblPreguntaInicio.Size = new System.Drawing.Size(179, 13);
             this.lblPreguntaInicio.TabIndex = 26;
             this.lblPreguntaInicio.Text = "¿No tienes cuenta?, Registrate aquí";
+            this.lblPreguntaInicio.Click += new System.EventHandler(this.lblPreguntaInicio_Click);
             // 
             // linkLabel2
             // 
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel2.LinkColor = System.Drawing.Color.Navy;
-            this.linkLabel2.Location = new System.Drawing.Point(300, 470);
+            this.linkLabel2.Location = new System.Drawing.Point(297, 446);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(80, 18);
             this.linkLabel2.TabIndex = 39;
@@ -335,7 +338,7 @@ namespace Elementos
             this.cbMostrar.BackColor = System.Drawing.Color.Transparent;
             this.cbMostrar.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbMostrar.ForeColor = System.Drawing.Color.Navy;
-            this.cbMostrar.Location = new System.Drawing.Point(50, 326);
+            this.cbMostrar.Location = new System.Drawing.Point(50, 318);
             this.cbMostrar.Name = "cbMostrar";
             this.cbMostrar.Size = new System.Drawing.Size(178, 22);
             this.cbMostrar.TabIndex = 38;

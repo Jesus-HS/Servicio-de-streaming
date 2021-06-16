@@ -24,5 +24,10 @@ namespace serviciosstreaming
             query.Consulta("CALL insertarDirector('" + txtDirector.Text + "')");
             dgvDirectores.DataSource = query.obtenerTabla("SELECT nombreDirector 'Nombre del Director' FROM directores");
         }
+
+        private void frmAgregarDirectores_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -29,6 +29,7 @@ namespace serviciosstreaming
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregarPeliculas));
             this.txtNomPelicula = new System.Windows.Forms.TextBox();
             this.richDescripcion = new System.Windows.Forms.RichTextBox();
             this.cbGeneroPelicula = new System.Windows.Forms.ComboBox();
@@ -54,7 +55,7 @@ namespace serviciosstreaming
             // 
             this.txtNomPelicula.Location = new System.Drawing.Point(226, 30);
             this.txtNomPelicula.Name = "txtNomPelicula";
-            this.txtNomPelicula.Size = new System.Drawing.Size(121, 20);
+            this.txtNomPelicula.Size = new System.Drawing.Size(158, 20);
             this.txtNomPelicula.TabIndex = 0;
             // 
             // richDescripcion
@@ -89,16 +90,20 @@ namespace serviciosstreaming
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 13);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Descripcion";
+            this.label3.Text = "Descripción";
             // 
             // btnCargar
             // 
+            this.btnCargar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
+            this.btnCargar.FlatAppearance.BorderSize = 0;
+            this.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCargar.ForeColor = System.Drawing.Color.White;
             this.btnCargar.Location = new System.Drawing.Point(12, 358);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(498, 47);
             this.btnCargar.TabIndex = 7;
             this.btnCargar.Text = "Cargar";
-            this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.UseVisualStyleBackColor = false;
             this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // cbGeneros
@@ -119,12 +124,16 @@ namespace serviciosstreaming
             // 
             // btnCargarFoto
             // 
+            this.btnCargarFoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
+            this.btnCargarFoto.FlatAppearance.BorderSize = 0;
+            this.btnCargarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCargarFoto.ForeColor = System.Drawing.Color.White;
             this.btnCargarFoto.Location = new System.Drawing.Point(12, 323);
             this.btnCargarFoto.Name = "btnCargarFoto";
             this.btnCargarFoto.Size = new System.Drawing.Size(195, 29);
             this.btnCargarFoto.TabIndex = 11;
             this.btnCargarFoto.Text = "Cargar Foto";
-            this.btnCargarFoto.UseVisualStyleBackColor = true;
+            this.btnCargarFoto.UseVisualStyleBackColor = false;
             this.btnCargarFoto.Click += new System.EventHandler(this.btnCargarFoto_Click);
             // 
             // btnCargarGeneros
@@ -201,7 +210,7 @@ namespace serviciosstreaming
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(868, 413);
             this.Controls.Add(this.btnCargarDirectores);
             this.Controls.Add(this.cbDirectores);
@@ -220,8 +229,12 @@ namespace serviciosstreaming
             this.Controls.Add(this.cbGeneroPelicula);
             this.Controls.Add(this.richDescripcion);
             this.Controls.Add(this.txtNomPelicula);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmAgregarPeliculas";
-            this.Text = "frmPeliculas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Agregar peliculas";
             ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFotoPelicula)).EndInit();
             this.ResumeLayout(false);
