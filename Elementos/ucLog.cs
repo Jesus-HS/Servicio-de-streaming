@@ -19,8 +19,32 @@ namespace Elementos
         }
         Consultas query = new Consultas();
         ErrorProvider ep = new ErrorProvider();
-
         public object id { get; private set; }
+
+        private void btnIniciar_Click(object sender, EventArgs e)
+        {
+            //Consulta para obtener los usuarios
+            string consulta = string.Format("SELECT * FROM usuarios WHERE nombreUsuario = '" + txtUsuario.Text.Trim() + "' AND contrasenaUsuario = '" + txtPass.Text.Trim() + "'");
+
+            //Aqui obtenemos la tabla de la consulta
+            DataTable dt = query.obtenerTabla(consulta);
+
+            //Sustraemos los datos de la consulta
+            id = dt.Rows[0]["idUsuario"].ToString().Trim();
+            string account = dt.Rows[0]["nombreUsuario"].ToString().Trim();
+            string pass = dt.Rows[0]["contrasenaUsuario"].ToString().Trim();
+
+            /* Si los datos almacenados en las variables corresponden a los mismo que los ingresados en
+               las cajas de texto entonces nos lanza el formulario principal */
+            if (account == txtUsuario.Text.Trim() && pass == txtPass.Text.Trim())
+            {
+                MessageBox.Show("Funciona");
+            }
+            else
+            {
+                MessageBox.Show("Hubo un error, intentalo de nuevo más tarde.");
+            }
+        }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
@@ -29,6 +53,8 @@ namespace Elementos
                 query.Consulta("CALL insertarUsuario ('" + txtUser.Text + "', '" + txtPassword.Text + "')");
             }
         }
+
+        #region Complementos para el funcionamiento
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             /* Para que la casilla donde se ingres ala contraseña pueda ser visible 
@@ -76,21 +102,18 @@ namespace Elementos
             panel2.Hide();
             panel3.Show();panel3.Location = new Point(0, 0);
         }
-
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             //Patras de registrarse
             panel2.Hide();
             panel1.Show();
         }
-
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             //Patras de iniciar sesion
             panel3.Hide();
             panel1.Show();
         }
-
         private void cbMostrar_CheckedChanged(object sender, EventArgs e)
         {
             /* Para que la casilla donde se ingres ala contraseña pueda ser visible 
@@ -107,21 +130,6 @@ namespace Elementos
                 txtPass.PasswordChar = '*';
             }
         }
-
-        private void btnIniciar_Click(object sender, EventArgs e)
-        {
-            string consulta = string.Format("SELECT * FROM usuarios WHERE nombreUsuario = '" + txtUsuario.Text.Trim() + "' AND contrasenaUsuario = '" + txtPass.Text.Trim() + "'");
-
-            id = query.Consulta("idUsuario", consulta);
-            string account = query.Consulta("nombreUsuario", consulta);
-            string pass = query.Consulta("contrasenaUsuario", consulta);
-
-            /* Si los datos almacenados en las variables corresponden a los mismo que los ingresados en
-               las cajas de texto entonces nos lanza el formulario principal */
-            if (account == txtUsuario.Text.Trim() && pass == txtPass.Text.Trim())
-            {
-                MessageBox.Show("Funciona");
-            }
-        }
+        #endregion
     }
 }

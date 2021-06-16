@@ -73,9 +73,9 @@ namespace serviciosstreaming.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap logo {
+        internal static System.Drawing.Bitmap icono {
             get {
-                object obj = ResourceManager.GetObject("logo", resourceCulture);
+                object obj = ResourceManager.GetObject("icono", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,19 +83,9 @@ namespace serviciosstreaming.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap popcorn {
+        internal static System.Drawing.Bitmap portada {
             get {
-                object obj = ResourceManager.GetObject("popcorn", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap popcorn__1_ {
-            get {
-                object obj = ResourceManager.GetObject("popcorn (1)", resourceCulture);
+                object obj = ResourceManager.GetObject("portada", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

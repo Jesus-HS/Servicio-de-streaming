@@ -1,7 +1,7 @@
 ﻿
 namespace serviciosstreaming
 {
-    partial class frmPeliculas
+    partial class frmAgregarPeliculas
     {
         /// <summary>
         /// Required designer variable.
@@ -32,17 +32,22 @@ namespace serviciosstreaming
             this.txtNomPelicula = new System.Windows.Forms.TextBox();
             this.richDescripcion = new System.Windows.Forms.RichTextBox();
             this.cbGeneroPelicula = new System.Windows.Forms.ComboBox();
-            this.ptbFotoPelicula = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnCargar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.cbGeneros = new System.Windows.Forms.ComboBox();
-            this.dgvInformacion = new System.Windows.Forms.DataGridView();
+            this.dgvPeliculas = new System.Windows.Forms.DataGridView();
             this.btnCargarFoto = new System.Windows.Forms.Button();
             this.btnCargarGeneros = new System.Windows.Forms.Button();
+            this.ptbFotoPelicula = new System.Windows.Forms.PictureBox();
+            this.btnCargarActores = new System.Windows.Forms.Button();
+            this.cbActores = new System.Windows.Forms.ComboBox();
+            this.cbActorPelicula = new System.Windows.Forms.ComboBox();
+            this.btnCargarDirectores = new System.Windows.Forms.Button();
+            this.cbDirectores = new System.Windows.Forms.ComboBox();
+            this.cbDirectorPelicula = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFotoPelicula)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInformacion)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNomPelicula
@@ -56,7 +61,7 @@ namespace serviciosstreaming
             // 
             this.richDescripcion.Location = new System.Drawing.Point(226, 69);
             this.richDescripcion.Name = "richDescripcion";
-            this.richDescripcion.Size = new System.Drawing.Size(121, 107);
+            this.richDescripcion.Size = new System.Drawing.Size(284, 107);
             this.richDescripcion.TabIndex = 1;
             this.richDescripcion.Text = "";
             // 
@@ -67,15 +72,6 @@ namespace serviciosstreaming
             this.cbGeneroPelicula.Name = "cbGeneroPelicula";
             this.cbGeneroPelicula.Size = new System.Drawing.Size(121, 21);
             this.cbGeneroPelicula.TabIndex = 2;
-            // 
-            // ptbFotoPelicula
-            // 
-            this.ptbFotoPelicula.Location = new System.Drawing.Point(12, 12);
-            this.ptbFotoPelicula.Name = "ptbFotoPelicula";
-            this.ptbFotoPelicula.Size = new System.Drawing.Size(195, 305);
-            this.ptbFotoPelicula.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ptbFotoPelicula.TabIndex = 3;
-            this.ptbFotoPelicula.TabStop = false;
             // 
             // label2
             // 
@@ -97,22 +93,13 @@ namespace serviciosstreaming
             // 
             // btnCargar
             // 
-            this.btnCargar.Location = new System.Drawing.Point(24, 437);
+            this.btnCargar.Location = new System.Drawing.Point(12, 358);
             this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(282, 47);
+            this.btnCargar.Size = new System.Drawing.Size(498, 47);
             this.btnCargar.TabIndex = 7;
             this.btnCargar.Text = "Cargar";
             this.btnCargar.UseVisualStyleBackColor = true;
             this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(24, 490);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(282, 45);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // cbGeneros
             // 
@@ -122,19 +109,19 @@ namespace serviciosstreaming
             this.cbGeneros.Size = new System.Drawing.Size(120, 21);
             this.cbGeneros.TabIndex = 9;
             // 
-            // dgvInformacion
+            // dgvPeliculas
             // 
-            this.dgvInformacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInformacion.Location = new System.Drawing.Point(435, 262);
-            this.dgvInformacion.Name = "dgvInformacion";
-            this.dgvInformacion.Size = new System.Drawing.Size(198, 202);
-            this.dgvInformacion.TabIndex = 10;
+            this.dgvPeliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPeliculas.Location = new System.Drawing.Point(565, 12);
+            this.dgvPeliculas.Name = "dgvPeliculas";
+            this.dgvPeliculas.Size = new System.Drawing.Size(158, 202);
+            this.dgvPeliculas.TabIndex = 10;
             // 
             // btnCargarFoto
             // 
             this.btnCargarFoto.Location = new System.Drawing.Point(12, 323);
             this.btnCargarFoto.Name = "btnCargarFoto";
-            this.btnCargarFoto.Size = new System.Drawing.Size(195, 23);
+            this.btnCargarFoto.Size = new System.Drawing.Size(195, 29);
             this.btnCargarFoto.TabIndex = 11;
             this.btnCargarFoto.Text = "Cargar Foto";
             this.btnCargarFoto.UseVisualStyleBackColor = true;
@@ -150,16 +137,82 @@ namespace serviciosstreaming
             this.btnCargarGeneros.UseVisualStyleBackColor = true;
             this.btnCargarGeneros.Click += new System.EventHandler(this.btnCargarCategoria_Click);
             // 
-            // frmPeliculas
+            // ptbFotoPelicula
+            // 
+            this.ptbFotoPelicula.Image = global::serviciosstreaming.Properties.Resources.portada;
+            this.ptbFotoPelicula.Location = new System.Drawing.Point(12, 12);
+            this.ptbFotoPelicula.Name = "ptbFotoPelicula";
+            this.ptbFotoPelicula.Size = new System.Drawing.Size(195, 305);
+            this.ptbFotoPelicula.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ptbFotoPelicula.TabIndex = 3;
+            this.ptbFotoPelicula.TabStop = false;
+            // 
+            // btnCargarActores
+            // 
+            this.btnCargarActores.Location = new System.Drawing.Point(353, 209);
+            this.btnCargarActores.Name = "btnCargarActores";
+            this.btnCargarActores.Size = new System.Drawing.Size(31, 23);
+            this.btnCargarActores.TabIndex = 15;
+            this.btnCargarActores.Text = "<-";
+            this.btnCargarActores.UseVisualStyleBackColor = true;
+            // 
+            // cbActores
+            // 
+            this.cbActores.FormattingEnabled = true;
+            this.cbActores.Location = new System.Drawing.Point(390, 209);
+            this.cbActores.Name = "cbActores";
+            this.cbActores.Size = new System.Drawing.Size(120, 21);
+            this.cbActores.TabIndex = 14;
+            // 
+            // cbActorPelicula
+            // 
+            this.cbActorPelicula.FormattingEnabled = true;
+            this.cbActorPelicula.Location = new System.Drawing.Point(226, 209);
+            this.cbActorPelicula.Name = "cbActorPelicula";
+            this.cbActorPelicula.Size = new System.Drawing.Size(121, 21);
+            this.cbActorPelicula.TabIndex = 13;
+            // 
+            // btnCargarDirectores
+            // 
+            this.btnCargarDirectores.Location = new System.Drawing.Point(353, 236);
+            this.btnCargarDirectores.Name = "btnCargarDirectores";
+            this.btnCargarDirectores.Size = new System.Drawing.Size(31, 23);
+            this.btnCargarDirectores.TabIndex = 18;
+            this.btnCargarDirectores.Text = "<-";
+            this.btnCargarDirectores.UseVisualStyleBackColor = true;
+            // 
+            // cbDirectores
+            // 
+            this.cbDirectores.FormattingEnabled = true;
+            this.cbDirectores.Location = new System.Drawing.Point(390, 236);
+            this.cbDirectores.Name = "cbDirectores";
+            this.cbDirectores.Size = new System.Drawing.Size(120, 21);
+            this.cbDirectores.TabIndex = 17;
+            // 
+            // cbDirectorPelicula
+            // 
+            this.cbDirectorPelicula.FormattingEnabled = true;
+            this.cbDirectorPelicula.Location = new System.Drawing.Point(226, 236);
+            this.cbDirectorPelicula.Name = "cbDirectorPelicula";
+            this.cbDirectorPelicula.Size = new System.Drawing.Size(121, 21);
+            this.cbDirectorPelicula.TabIndex = 16;
+            // 
+            // frmAgregarPeliculas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(690, 563);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(868, 413);
+            this.Controls.Add(this.btnCargarDirectores);
+            this.Controls.Add(this.cbDirectores);
+            this.Controls.Add(this.cbDirectorPelicula);
+            this.Controls.Add(this.btnCargarActores);
+            this.Controls.Add(this.cbActores);
+            this.Controls.Add(this.cbActorPelicula);
             this.Controls.Add(this.btnCargarGeneros);
             this.Controls.Add(this.btnCargarFoto);
-            this.Controls.Add(this.dgvInformacion);
+            this.Controls.Add(this.dgvPeliculas);
             this.Controls.Add(this.cbGeneros);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -167,10 +220,10 @@ namespace serviciosstreaming
             this.Controls.Add(this.cbGeneroPelicula);
             this.Controls.Add(this.richDescripcion);
             this.Controls.Add(this.txtNomPelicula);
-            this.Name = "frmPeliculas";
+            this.Name = "frmAgregarPeliculas";
             this.Text = "frmPeliculas";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPeliculas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ptbFotoPelicula)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInformacion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,10 +238,15 @@ namespace serviciosstreaming
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnCargar;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox cbGeneros;
-        private System.Windows.Forms.DataGridView dgvInformacion;
+        private System.Windows.Forms.DataGridView dgvPeliculas;
         private System.Windows.Forms.Button btnCargarFoto;
         private System.Windows.Forms.Button btnCargarGeneros;
+        private System.Windows.Forms.Button btnCargarActores;
+        private System.Windows.Forms.ComboBox cbActores;
+        private System.Windows.Forms.ComboBox cbActorPelicula;
+        private System.Windows.Forms.Button btnCargarDirectores;
+        private System.Windows.Forms.ComboBox cbDirectores;
+        private System.Windows.Forms.ComboBox cbDirectorPelicula;
     }
 }

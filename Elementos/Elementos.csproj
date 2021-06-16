@@ -87,6 +87,12 @@
   <ItemGroup>
     <Compile Include="Consultas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ucComentarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucComentarios.Designer.cs">
+      <DependentUpon>ucComentarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucLog.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ucComentarios.resx">
+      <DependentUpon>ucComentarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucLog.resx">
       <DependentUpon>ucLog.cs</DependentUpon>
     </EmbeddedResource>

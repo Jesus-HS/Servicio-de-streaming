@@ -1,7 +1,7 @@
 ﻿
 namespace serviciosstreaming
 {
-    partial class frmInicioSesion
+    partial class frmInicio
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -29,15 +29,15 @@ namespace serviciosstreaming
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicioSesion));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmInicio));
             this.pBarrita = new System.Windows.Forms.Panel();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.pCuerpo = new System.Windows.Forms.Panel();
-            this.ucRegister1 = new Elementos.ucLog();
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.panelInicio = new System.Windows.Forms.Panel();
+            this.ucRegister1 = new Elementos.ucLog();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pbIcono = new System.Windows.Forms.PictureBox();
-            this.lblTitulo = new System.Windows.Forms.Label();
             this.pBarrita.SuspendLayout();
             this.pCuerpo.SuspendLayout();
             this.panelInicio.SuspendLayout();
@@ -47,13 +47,25 @@ namespace serviciosstreaming
             // 
             // pBarrita
             // 
+            this.pBarrita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
             this.pBarrita.Controls.Add(this.lblTitulo);
             this.pBarrita.Controls.Add(this.pbIcono);
             this.pBarrita.Dock = System.Windows.Forms.DockStyle.Top;
             this.pBarrita.Location = new System.Drawing.Point(0, 0);
             this.pBarrita.Name = "pBarrita";
-            this.pBarrita.Size = new System.Drawing.Size(840, 37);
+            this.pBarrita.Size = new System.Drawing.Size(840, 41);
             this.pBarrita.TabIndex = 3;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblTitulo.Location = new System.Drawing.Point(44, 12);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(55, 15);
+            this.lblTitulo.TabIndex = 1;
+            this.lblTitulo.Text = "TITULO";
             // 
             // pCuerpo
             // 
@@ -61,19 +73,10 @@ namespace serviciosstreaming
             this.pCuerpo.Controls.Add(this.panelInicio);
             this.pCuerpo.Controls.Add(this.pictureBox1);
             this.pCuerpo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pCuerpo.Location = new System.Drawing.Point(0, 37);
+            this.pCuerpo.Location = new System.Drawing.Point(0, 41);
             this.pCuerpo.Name = "pCuerpo";
-            this.pCuerpo.Size = new System.Drawing.Size(840, 476);
+            this.pCuerpo.Size = new System.Drawing.Size(840, 472);
             this.pCuerpo.TabIndex = 4;
-            // 
-            // ucRegister1
-            // 
-            this.ucRegister1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(250)))), ((int)(((byte)(238)))));
-            this.ucRegister1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ucRegister1.Location = new System.Drawing.Point(2, 0);
-            this.ucRegister1.Name = "ucRegister1";
-            this.ucRegister1.Size = new System.Drawing.Size(389, 476);
-            this.ucRegister1.TabIndex = 3;
             // 
             // lblBienvenido
             // 
@@ -94,8 +97,17 @@ namespace serviciosstreaming
             this.panelInicio.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelInicio.Location = new System.Drawing.Point(447, 0);
             this.panelInicio.Name = "panelInicio";
-            this.panelInicio.Size = new System.Drawing.Size(393, 476);
+            this.panelInicio.Size = new System.Drawing.Size(393, 472);
             this.panelInicio.TabIndex = 4;
+            // 
+            // ucRegister1
+            // 
+            this.ucRegister1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(250)))), ((int)(((byte)(238)))));
+            this.ucRegister1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ucRegister1.Location = new System.Drawing.Point(2, 0);
+            this.ucRegister1.Name = "ucRegister1";
+            this.ucRegister1.Size = new System.Drawing.Size(389, 476);
+            this.ucRegister1.TabIndex = 3;
             // 
             // pictureBox1
             // 
@@ -109,26 +121,15 @@ namespace serviciosstreaming
             // 
             // pbIcono
             // 
-            this.pbIcono.Image = global::serviciosstreaming.Properties.Resources.claqueta;
-            this.pbIcono.Location = new System.Drawing.Point(3, 3);
+            this.pbIcono.Image = global::serviciosstreaming.Properties.Resources.icono;
+            this.pbIcono.Location = new System.Drawing.Point(7, 8);
             this.pbIcono.Name = "pbIcono";
-            this.pbIcono.Size = new System.Drawing.Size(30, 30);
+            this.pbIcono.Size = new System.Drawing.Size(24, 24);
             this.pbIcono.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbIcono.TabIndex = 0;
             this.pbIcono.TabStop = false;
             // 
-            // lblTitulo
-            // 
-            this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblTitulo.Location = new System.Drawing.Point(39, 11);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(43, 15);
-            this.lblTitulo.TabIndex = 1;
-            this.lblTitulo.Text = "Titulo";
-            // 
-            // frmInicioSesion
+            // frmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -136,10 +137,11 @@ namespace serviciosstreaming
             this.ClientSize = new System.Drawing.Size(840, 513);
             this.Controls.Add(this.pCuerpo);
             this.Controls.Add(this.pBarrita);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmInicioSesion";
+            this.Name = "frmInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Servicios streaming";
             this.pBarrita.ResumeLayout(false);

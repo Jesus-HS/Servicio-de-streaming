@@ -14,8 +14,6 @@ namespace Elementos
         private DataTable dt;
         private MySqlDataAdapter da;
         
-
-
         /// <summary> 
         /// Realiza una conexion a la tabla
         /// </summary>
@@ -30,26 +28,7 @@ namespace Elementos
                 MessageBox.Show("Se logro acceder a la base de datos" + ex);
             }
         }
-        /// <summary> 
-        /// Metodo para mostrar o buscar dentro de una tabla, recibe DataGridView para actualizar y una consulta
-        /// </summary>
-        public void Consulta(DataGridView dgv, string consulta)
-        {
-            try
-            {
-                cn.Open();
-                da = new MySqlDataAdapter(consulta, cn);
-                dt = new DataTable();
-                da.Fill(dt);
-                dgv.DataSource = dt;
-                cn.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("No se ha podido mostrar la tabla, código de error: \n" + ex);
-            }
-        }
-       
+
         /// <summary> 
         /// Recibe solo 1 parametro, para consulta sobre insertar, borrar o modificar
         /// </summary>
@@ -67,28 +46,11 @@ namespace Elementos
                 MessageBox.Show("No se logro insertar:" + ex);
             }
         }
-        
         /// <summary>
-        /// Recibe 2 parametros, la columna del dato que se quiere recibir y la consulta
-        /// </sumary>
-        public string Consulta(string columna, string consulta)
-        {
-            try
-            {
-                cn.Open();
-                cmd = new MySqlCommand(consulta, cn);
-                da = new MySqlDataAdapter(cmd);
-                dt = new DataTable();
-                da.Fill(dt);
-                cn.Close();
-                return dt.Rows[0][columna].ToString().Trim();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("No se obtener:" + ex);
-                return String.Empty;
-            }
-        }
+        /// Sirve para mostrar una consulta como SELECT entero o individual
+        /// </summary>
+        /// <param name="consulta"></param>
+        /// <returns>Una tabla</returns>
         public DataTable obtenerTabla(string consulta)
         {
             try

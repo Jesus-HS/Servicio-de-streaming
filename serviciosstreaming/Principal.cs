@@ -73,7 +73,48 @@ namespace serviciosstreaming
 
         private void mostrar_click(object sender, EventArgs e)
         {
+            PictureBox pictureBox = (PictureBox)sender;
 
+            string id = pictureBox.Name.ToString();
+
+            frmMostrarPelicula frmMostrarPelicula = new frmMostrarPelicula(id);
+            frmMostrarPelicula.Show();
+        }
+
+        private void btnPeliculas_Click(object sender, EventArgs e)
+        {
+            frmAgregarPeliculas agregarPeliculas = new frmAgregarPeliculas();
+            agregarPeliculas.Show();
+        }
+
+        private void btnDirectores_Click(object sender, EventArgs e)
+        {
+            frmAgregarDirectores agregarDirectores = new frmAgregarDirectores();
+            agregarDirectores.Show();
+        }
+
+        private void btnCategorias_Click(object sender, EventArgs e)
+        {
+            frmAgregarGeneros agregarGeneros = new frmAgregarGeneros();
+            agregarGeneros.Show();
+        }
+
+        private void btnPlataforma_Click(object sender, EventArgs e)
+        {
+            frmAgregarPlataforma agregarPlataforma = new frmAgregarPlataforma();
+            agregarPlataforma.Show();
+        }
+
+        private void btnActores_Click(object sender, EventArgs e)
+        {
+            frmAgregarActores agregarActores = new frmAgregarActores();
+            agregarActores.Show();
+        }
+
+        private void btnTipos_Click(object sender, EventArgs e)
+        {
+            frmAgregarTipos agregarTipos = new frmAgregarTipos();
+            agregarTipos.Show();
         }
     }
 }

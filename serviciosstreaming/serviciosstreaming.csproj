@@ -52,17 +52,53 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="frmAgregarActores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmAgregarActores.Designer.cs">
+      <DependentUpon>frmAgregarActores.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPeliculas.cs">
+    <Compile Include="frmAgregarDirectores.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPeliculas.Designer.cs">
-      <DependentUpon>frmPeliculas.cs</DependentUpon>
+    <Compile Include="frmAgregarDirectores.Designer.cs">
+      <DependentUpon>frmAgregarDirectores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarGeneros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarGeneros.Designer.cs">
+      <DependentUpon>frmAgregarGeneros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarPlataforma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarPlataforma.Designer.cs">
+      <DependentUpon>frmAgregarPlataforma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarTipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarTipos.Designer.cs">
+      <DependentUpon>frmAgregarTipos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInicio.Designer.cs">
+      <DependentUpon>frmInicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAgregarPeliculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarPeliculas.Designer.cs">
+      <DependentUpon>frmAgregarPeliculas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMostrarPelicula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMostrarPelicula.Designer.cs">
+      <DependentUpon>frmMostrarPelicula.cs</DependentUpon>
     </Compile>
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
@@ -72,11 +108,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="frmAgregarActores.resx">
+      <DependentUpon>frmAgregarActores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPeliculas.resx">
-      <DependentUpon>frmPeliculas.cs</DependentUpon>
+    <EmbeddedResource Include="frmAgregarDirectores.resx">
+      <DependentUpon>frmAgregarDirectores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarGeneros.resx">
+      <DependentUpon>frmAgregarGeneros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarPlataforma.resx">
+      <DependentUpon>frmAgregarPlataforma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarTipos.resx">
+      <DependentUpon>frmAgregarTipos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInicio.resx">
+      <DependentUpon>frmInicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarPeliculas.resx">
+      <DependentUpon>frmAgregarPeliculas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMostrarPelicula.resx">
+      <DependentUpon>frmMostrarPelicula.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
@@ -132,6 +186,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\claqueta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icono.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\portada.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

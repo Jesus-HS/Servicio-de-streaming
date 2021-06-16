@@ -111,5 +111,11 @@ C:\Users\Velasques\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\obj
 C:\Users\Velasques\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\obj\Debug\serviciosstreaming.csproj.CopyComplete
 C:\Users\Velasques\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\obj\Debug\serviciosstreaming.exe
 C:\Users\Velasques\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\obj\Debug\serviciosstreaming.pdb
-C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\obj\Debug\serviciosstreaming.frmPeliculas.resources
-C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\obj\Debug\serviciosstreaming.frmInicioSesion.resources
+C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\obj\Debug\serviciosstreaming.frmInicio.resources
+C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\obj\Debug\serviciosstreaming.frmAgregarPeliculas.resources
+C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\obj\Debug\serviciosstreaming.frmAgregarActores.resources
+C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\obj\Debug\serviciosstreaming.frmAgregarTipos.resources
+C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\obj\Debug\serviciosstreaming.frmAgregarPlataforma.resources
+C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\obj\Debug\serviciosstreaming.frmAgregarGeneros.resources
+C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\obj\Debug\serviciosstreaming.frmAgregarDirectores.resources
+C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\serviciosstreaming\obj\Debug\serviciosstreaming.frmMostrarPelicula.resources

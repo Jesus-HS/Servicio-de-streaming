@@ -13,18 +13,12 @@ using System.Windows.Forms;
 
 namespace serviciosstreaming
 {
-    public partial class frmInicioSesion : Form
+    public partial class frmInicio : Form
     {
-        public frmInicioSesion()
+        public frmInicio()
         {
             InitializeComponent();
             lblTitulo.Text = Text;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            frmPeliculas frmPelica = new frmPeliculas();
-            frmPelica.Show();
         }
     }
 }

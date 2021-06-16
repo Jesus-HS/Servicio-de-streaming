@@ -70,3 +70,4 @@ C:\Users\Velasques\Documents\GitHub\Servicio-de-streaming\Elementos\obj\Debug\El
 C:\Users\Velasques\Documents\GitHub\Servicio-de-streaming\Elementos\obj\Debug\Elementos.csproj.CopyComplete
 C:\Users\Velasques\Documents\GitHub\Servicio-de-streaming\Elementos\obj\Debug\Elementos.dll
 C:\Users\Velasques\Documents\GitHub\Servicio-de-streaming\Elementos\obj\Debug\Elementos.pdb
+C:\Users\LasAv\OneDrive\Documents\GitHub\Servicio-de-streaming\Elementos\obj\Debug\Elementos.ucComentarios.resources
