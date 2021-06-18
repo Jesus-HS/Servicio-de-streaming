@@ -158,7 +158,7 @@ namespace Elementos
             this.panelParaRegistrar.Controls.Add(this.txtPassword);
             this.panelParaRegistrar.Controls.Add(this.checkBox1);
             this.panelParaRegistrar.Controls.Add(this.txtPasswordC);
-            this.panelParaRegistrar.Location = new System.Drawing.Point(34, 339);
+            this.panelParaRegistrar.Location = new System.Drawing.Point(330, 24);
             this.panelParaRegistrar.Name = "panelParaRegistrar";
             this.panelParaRegistrar.Size = new System.Drawing.Size(227, 297);
             this.panelParaRegistrar.TabIndex = 33;
@@ -382,7 +382,7 @@ namespace Elementos
             this.Controls.Add(this.label2);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "ucLog";
-            this.Size = new System.Drawing.Size(301, 662);
+            this.Size = new System.Drawing.Size(579, 339);
             this.panelParaRegistrar.ResumeLayout(false);
             this.panelParaRegistrar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();

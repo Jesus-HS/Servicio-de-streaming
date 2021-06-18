@@ -65,6 +65,12 @@ namespace serviciosstreaming
         }
         //Para mover la forma sin borde
         int posicion_x = 0, posicion_y = 0;
+
+        private void lblCerrar_Click_1(object sender, EventArgs e)
+        {
+            Close();
+        }
+
         private void frmAgregarGeneros_MouseMove(object sender, MouseEventArgs e)
         {
             //Si Boton izquierdo esta activo

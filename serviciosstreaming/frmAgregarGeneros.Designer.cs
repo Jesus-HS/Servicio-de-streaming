@@ -77,6 +77,7 @@ namespace serviciosstreaming
             this.lblCerrar.Size = new System.Drawing.Size(14, 13);
             this.lblCerrar.TabIndex = 57;
             this.lblCerrar.Text = "X";
+            this.lblCerrar.Click += new System.EventHandler(this.lblCerrar_Click_1);
             // 
             // logo
             // 
