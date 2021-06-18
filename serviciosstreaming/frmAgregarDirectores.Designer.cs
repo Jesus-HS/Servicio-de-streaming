@@ -62,9 +62,9 @@ namespace serviciosstreaming
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(41, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 16);
+            this.label1.Size = new System.Drawing.Size(110, 16);
             this.label1.TabIndex = 58;
-            this.label1.Text = "label1";
+            this.label1.Text = "Agregar directores";
             // 
             // lblCerrar
             // 

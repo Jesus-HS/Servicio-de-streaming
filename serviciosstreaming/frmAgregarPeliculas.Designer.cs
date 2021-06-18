@@ -68,7 +68,7 @@ namespace serviciosstreaming
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 21);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Pelicula";
+            this.label2.Text = "Película";
             // 
             // label3
             // 
@@ -102,9 +102,9 @@ namespace serviciosstreaming
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(40, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 16);
+            this.label1.Size = new System.Drawing.Size(104, 16);
             this.label1.TabIndex = 21;
-            this.label1.Text = "label1";
+            this.label1.Text = "Agregar películas";
             // 
             // lblCerrar
             // 
@@ -117,6 +117,7 @@ namespace serviciosstreaming
             this.lblCerrar.Size = new System.Drawing.Size(14, 13);
             this.lblCerrar.TabIndex = 20;
             this.lblCerrar.Text = "X";
+            this.lblCerrar.Click += new System.EventHandler(this.lblCerrar_Click);
             // 
             // richDescripcion
             // 

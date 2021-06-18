@@ -91,6 +91,11 @@ namespace serviciosstreaming
             frmEditarPelicula.Show();
         }
 
+        private void lblCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
         private void frmAgregarPeliculas_MouseMove(object sender, MouseEventArgs e)
         {
             //Si Boton izquierdo esta activo

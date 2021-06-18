@@ -49,6 +49,9 @@ namespace Elementos
             if (Validarcampos())
             {
                 query.Consulta("CALL insertarUsuario ('" + txtUser.Text + "', '" + txtPassword.Text + "')");
+                MessageBox.Show("Cuenta de usuario añadida.");
+                Principal principal = new Principal();
+                principal.Show();
             }
         }
 
@@ -68,11 +71,11 @@ namespace Elementos
             bool ok = false;
             if (txtUser.Text == "" || txtUser.Text == null)
                 ep.SetError(txtUser, "Ingrese cuenta");
-            else if (txtPassword.Text == "" || txtPassword.Text == null)
+           else if (txtPassword.Text == "" || txtPassword.Text == null)
                 ep.SetError(txtPassword, "Ingrese contraseña");
             else if (txtPassword.Text != txtPasswordC.Text)
-                ep.SetError(txtPasswordC, "Las contraseñas no concuerdan.");
-            else
+                ep.SetError(txtPasswordC,"Las contraseñas no concuerdan.");
+            else 
                 ok = true;
             return ok;
         }
@@ -94,7 +97,6 @@ namespace Elementos
             panelColorRegistra.Visible = false;
             lblRegistrarse.ForeColor = Color.FromArgb(0, 0, 0);
         }
-
         private void lblRegistrarse_Click(object sender, EventArgs e)
         {
             panelParainiciar.Visible = false;
@@ -111,12 +113,10 @@ namespace Elementos
         {
             if(txtUsuario.Text == "") txtUsuario.Text = "Usuario";
         }
-
         private void txtUsuario_MouseEnter(object sender, EventArgs e)
         {
             if (txtUsuario.Text == "Usuario") txtUsuario.Clear();
         }
-
         private void txtPass_MouseEnter(object sender, EventArgs e)
         {
             if (txtPass.Text == "Contraseña")
@@ -125,7 +125,6 @@ namespace Elementos
                 txtPass.Clear();
             }
         }
-
         private void txtPass_MouseLeave(object sender, EventArgs e)
         {
             if (txtPass.Text == "") 

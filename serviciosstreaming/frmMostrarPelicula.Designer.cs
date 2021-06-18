@@ -58,9 +58,9 @@ namespace serviciosstreaming
             this.lblPelicula.Font = new System.Drawing.Font("Yu Gothic", 12F);
             this.lblPelicula.Location = new System.Drawing.Point(270, 47);
             this.lblPelicula.Name = "lblPelicula";
-            this.lblPelicula.Size = new System.Drawing.Size(109, 21);
+            this.lblPelicula.Size = new System.Drawing.Size(113, 21);
             this.lblPelicula.TabIndex = 1;
-            this.lblPelicula.Text = "titulo pelicula";
+            this.lblPelicula.Text = "Título película";
             // 
             // richDescripcion
             // 
@@ -124,7 +124,7 @@ namespace serviciosstreaming
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 16);
             this.label1.TabIndex = 23;
-            this.label1.Text = "Pelicula";
+            this.label1.Text = "Película";
             // 
             // logo
             // 
@@ -195,7 +195,7 @@ namespace serviciosstreaming
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 21);
             this.label3.TabIndex = 43;
-            this.label3.Text = "Genero";
+            this.label3.Text = "Género";
             // 
             // cbDirectorPelicula
             // 

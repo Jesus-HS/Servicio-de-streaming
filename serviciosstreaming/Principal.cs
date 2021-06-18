@@ -116,5 +116,13 @@ namespace serviciosstreaming
             frmAgregarTipos agregarTipos = new frmAgregarTipos();
             agregarTipos.Show();
         }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            //Application.Exit();
+            this.Hide();
+            frmInicio inicio = new frmInicio();
+            inicio.Show();
+        }
     }
 }

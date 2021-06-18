@@ -62,9 +62,9 @@ namespace serviciosstreaming
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(39, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 16);
+            this.label1.Size = new System.Drawing.Size(115, 16);
             this.label1.TabIndex = 48;
-            this.label1.Text = "label1";
+            this.label1.Text = "Agregar plataforma";
             // 
             // lblCerrar
             // 
@@ -220,7 +220,7 @@ namespace serviciosstreaming
             this.MinimizeBox = false;
             this.Name = "frmAgregarPlataforma";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Agregar pataforma";
+            this.Text = "Agregar plataforma";
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.frmAgregarPlataforma_MouseMove);
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv)).EndInit();

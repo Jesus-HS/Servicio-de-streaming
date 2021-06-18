@@ -42,6 +42,7 @@ namespace serviciosstreaming
             this.button6 = new System.Windows.Forms.Button();
             this.btnPeliculas = new System.Windows.Forms.Button();
             this.flpPeliculas = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnCerrar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -81,19 +82,20 @@ namespace serviciosstreaming
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Adobe Caslon Pro Bold", 24F, System.Drawing.FontStyle.Bold);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(151, 69);
             this.button1.TabIndex = 0;
-            this.button1.Text = "QuePeli";
+            this.button1.Text = "QuéPeli";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btnCerrar);
             this.panel2.Controls.Add(this.btnTipos);
             this.panel2.Controls.Add(this.btnActores);
             this.panel2.Controls.Add(this.btnPlataforma);
@@ -104,7 +106,7 @@ namespace serviciosstreaming
             this.panel2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panel2.Location = new System.Drawing.Point(777, 75);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(144, 216);
+            this.panel2.Size = new System.Drawing.Size(144, 253);
             this.panel2.TabIndex = 1;
             // 
             // btnTipos
@@ -182,7 +184,7 @@ namespace serviciosstreaming
             this.btnCategorias.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnCategorias.Size = new System.Drawing.Size(142, 35);
             this.btnCategorias.TabIndex = 7;
-            this.btnCategorias.Text = "Categorias";
+            this.btnCategorias.Text = "Categorías";
             this.btnCategorias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCategorias.UseVisualStyleBackColor = true;
             this.btnCategorias.Click += new System.EventHandler(this.btnCategorias_Click);
@@ -240,7 +242,7 @@ namespace serviciosstreaming
             this.btnPeliculas.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnPeliculas.Size = new System.Drawing.Size(142, 35);
             this.btnPeliculas.TabIndex = 4;
-            this.btnPeliculas.Text = "Peliculas";
+            this.btnPeliculas.Text = "Películas";
             this.btnPeliculas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnPeliculas.UseVisualStyleBackColor = true;
             this.btnPeliculas.Click += new System.EventHandler(this.btnPeliculas_Click);
@@ -252,13 +254,33 @@ namespace serviciosstreaming
             this.flpPeliculas.Size = new System.Drawing.Size(915, 185);
             this.flpPeliculas.TabIndex = 2;
             // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCerrar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnCerrar.FlatAppearance.BorderSize = 0;
+            this.btnCerrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btnCerrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.Font = new System.Drawing.Font("Yu Gothic", 12F);
+            this.btnCerrar.ForeColor = System.Drawing.Color.White;
+            this.btnCerrar.Location = new System.Drawing.Point(0, 210);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnCerrar.Size = new System.Drawing.Size(142, 35);
+            this.btnCerrar.TabIndex = 11;
+            this.btnCerrar.Text = "Cerrar ";
+            this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(939, 310);
+            this.ClientSize = new System.Drawing.Size(939, 340);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.flpPeliculas);
@@ -289,5 +311,6 @@ namespace serviciosstreaming
         private System.Windows.Forms.FlowLayoutPanel flpPeliculas;
         private System.Windows.Forms.Button btnTipos;
         private System.Windows.Forms.Button btnActores;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }
