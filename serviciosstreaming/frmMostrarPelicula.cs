@@ -83,5 +83,10 @@ namespace serviciosstreaming
         {
             Close();
         }
+
+        private void button1_Click(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

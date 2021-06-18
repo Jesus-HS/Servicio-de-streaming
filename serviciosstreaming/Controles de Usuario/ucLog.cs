@@ -16,7 +16,8 @@ namespace Elementos
         }
         Consultas query = new Consultas();
         ErrorProvider ep = new ErrorProvider();
-        public object id { get; private set; }
+        public string id { get; private set; }
+        string account, pass;
 
         private void btnIniciar_Click(object sender, EventArgs e)
         {
@@ -25,17 +26,22 @@ namespace Elementos
 
             //Aqui obtenemos la tabla de la consulta
             DataTable dt = query.obtenerTabla(consulta);
-
-            //Sustraemos los datos de la consulta
-            id = dt.Rows[0]["idUsuario"].ToString().Trim();
-            string account = dt.Rows[0]["nombreUsuario"].ToString().Trim();
-            string pass = dt.Rows[0]["contrasenaUsuario"].ToString().Trim();
-
+            try
+            {
+                //Sustraemos los datos de la consulta
+                id = dt.Rows[0]["idUsuario"].ToString().Trim();
+                account = dt.Rows[0]["nombreUsuario"].ToString().Trim();
+                pass = dt.Rows[0]["contrasenaUsuario"].ToString().Trim();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Los datos fueron ingresados incorrectamente, vuelta a intentarlo.");
+            }
             /* Si los datos almacenados en las variables corresponden a los mismo que los ingresados en
                las cajas de texto entonces nos lanza el formulario principal */
             if (account == txtUsuario.Text.Trim() && pass == txtPass.Text.Trim())
             {
-                Principal principal = new Principal();
+                Principal principal = new Principal(id);
                 principal.Show();
             }
             else
@@ -50,8 +56,12 @@ namespace Elementos
             {
                 query.Consulta("CALL insertarUsuario ('" + txtUser.Text + "', '" + txtPassword.Text + "')");
                 MessageBox.Show("Cuenta de usuario añadida.");
-                Principal principal = new Principal();
-                principal.Show();
+                panelParaRegistrar.Visible = false;
+                panelParainiciar.Visible = true;
+                panelColorRegistra.Visible = false;
+                panelColorInicia.Visible = true;
+                lblIniciarSesion.ForeColor = Color.FromArgb(69, 123, 157);
+                lblRegistrarse.ForeColor = Color.FromArgb(0, 0, 0);
             }
         }
 
@@ -69,9 +79,9 @@ namespace Elementos
         private bool Validarcampos()
         {
             bool ok = false;
-            if (txtUser.Text == "" || txtUser.Text == null)
+            if (txtUser.Text == "" || txtUser.Text == null || txtUser.Text == "Usuario")
                 ep.SetError(txtUser, "Ingrese cuenta");
-           else if (txtPassword.Text == "" || txtPassword.Text == null)
+           else if (txtPassword.Text == "" || txtPassword.Text == null || txtPassword.Text == "Contraseña")
                 ep.SetError(txtPassword, "Ingrese contraseña");
             else if (txtPassword.Text != txtPasswordC.Text)
                 ep.SetError(txtPasswordC,"Las contraseñas no concuerdan.");

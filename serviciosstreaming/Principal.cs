@@ -15,9 +15,11 @@ namespace serviciosstreaming
     public partial class Principal : Form
     {
         Consultas consultas = new Consultas();
-        public Principal()
+        public Principal(string id)
         {
             InitializeComponent();
+            DataTable dt = consultas.obtenerTabla("SELECT nombreUsuario FROM usuarios WHERE idUsuario = '" + id + "'");
+            btnUsuarioLogeado.Text = dt.Rows[0]["nombreUsuario"].ToString().Trim();
             Diseno();
         }
         private void Diseno()

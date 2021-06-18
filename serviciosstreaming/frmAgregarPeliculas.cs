@@ -53,10 +53,9 @@ namespace serviciosstreaming
                 consultas.cmd.ExecuteNonQuery();
                 consultas.cn.Close();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("No se ha podido cargar la pelicula");
-                throw;
+                MessageBox.Show("No se ha podido cargar la pelicula " + ex);
             }
             finally
             {
